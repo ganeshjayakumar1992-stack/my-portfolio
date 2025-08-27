@@ -1,37 +1,48 @@
-import { Helmet } from 'react-helmet-async'
 import { useParams } from 'react-router-dom'
 
 const BlogPost = () => {
   const { slug } = useParams()
 
   return (
-    <>
-      <Helmet>
-        <title>Blog Post - Ganesh Jayakumar</title>
-        <meta name="description" content="Read this blog post about development and technology." />
-      </Helmet>
+    <div className="section">
+      <div className="container">
+        <div className="section-header">
+          <h1 className="section-title">Blog Post</h1>
+          <p className="section-subtitle">
+            Individual blog post functionality coming soon!
+          </p>
+        </div>
 
-      <section className="section-padding">
-        <div className="container-custom">
-          <div className="max-w-4xl mx-auto">
-            <div className="text-center mb-16">
-              <h1 className="text-4xl md:text-5xl font-bold text-gray-900 dark:text-white mb-4">
-                Blog Post
-              </h1>
-              <p className="text-xl text-gray-600 dark:text-gray-300">
-                Individual blog post page for: {slug}
-              </p>
-            </div>
+        <div className="about-grid">
+          <div className="about-card">
+            <div className="card-icon">📄</div>
+            <h3 className="card-title">Post: {slug}</h3>
+            <p className="card-description">
+              This is where individual blog posts will be displayed. The MDX integration and blog 
+              functionality is planned for Phase 2 of the portfolio.
+            </p>
+          </div>
 
-            <div className="text-center">
-              <p className="text-gray-600 dark:text-gray-400 text-lg">
-                Individual blog post functionality coming soon! This will display full blog posts with MDX support.
-              </p>
-            </div>
+          <div className="about-card">
+            <div className="card-icon">🔧</div>
+            <h3 className="card-title">Features Coming</h3>
+            <p className="card-description">
+              Rich text formatting, code syntax highlighting, interactive examples, and a complete 
+              blog management system.
+            </p>
+          </div>
+
+          <div className="about-card">
+            <div className="card-icon">📚</div>
+            <h3 className="card-title">Stay Tuned</h3>
+            <p className="card-description">
+              I'm working on implementing the full blog functionality. In the meantime, check out 
+              the main blog page for updates on what's coming.
+            </p>
           </div>
         </div>
-      </section>
-    </>
+      </div>
+    </div>
   )
 }
 

@@ -1,32 +1,44 @@
-import { Helmet } from 'react-helmet-async'
-
 const Blog = () => {
   return (
-    <>
-      <Helmet>
-        <title>Blog - Ganesh Jayakumar</title>
-        <meta name="description" content="Read my thoughts on development, technology, and industry insights." />
-      </Helmet>
+    <div className="section">
+      <div className="container">
+        <div className="section-header">
+          <h1 className="section-title">Blog</h1>
+          <p className="section-subtitle">
+            Thoughts, tutorials, and insights about web development, technology, and my journey as a developer.
+          </p>
+        </div>
 
-      <section className="section-padding">
-        <div className="container-custom">
-          <div className="text-center mb-16">
-            <h1 className="text-4xl md:text-5xl font-bold text-gray-900 dark:text-white mb-4">
-              Blog
-            </h1>
-            <p className="text-xl text-gray-600 dark:text-gray-300 max-w-3xl mx-auto">
-              Sharing insights, tutorials, and thoughts on software development and technology.
+        <div className="about-grid">
+          <div className="about-card">
+            <div className="card-icon">📝</div>
+            <h3 className="card-title">Coming Soon!</h3>
+            <p className="card-description">
+              I'm working on some great content about React 19, modern CSS techniques, and full-stack development. 
+              Check back soon for the first post!
             </p>
           </div>
 
-          <div className="text-center">
-            <p className="text-gray-600 dark:text-gray-400 text-lg">
-              Blog posts coming soon! I'll be sharing development insights and tutorials here.
+          <div className="about-card">
+            <div className="card-icon">🚀</div>
+            <h3 className="card-title">What to Expect</h3>
+            <p className="card-description">
+              Tutorials, best practices, project walkthroughs, and insights from my development experience. 
+              All written with beginners in mind.
+            </p>
+          </div>
+
+          <div className="about-card">
+            <div className="card-icon">💡</div>
+            <h3 className="card-title">Topics</h3>
+            <p className="card-description">
+              React development, TypeScript tips, CSS techniques, backend development, deployment strategies, 
+              and lessons learned from real projects.
             </p>
           </div>
         </div>
-      </section>
-    </>
+      </div>
+    </div>
   )
 }
 
