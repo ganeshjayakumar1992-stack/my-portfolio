@@ -1,15 +1,8 @@
-import { Helmet } from 'react-helmet-async'
 import { Link } from 'react-router-dom'
 
 const Home = () => {
   return (
     <>
-      <Helmet>
-        <title>Ganesh Jayakumar - Full-Stack Developer</title>
-        <meta name="description" content="Full-stack developer passionate about creating innovative solutions and sharing knowledge through code and writing." />
-        <meta name="keywords" content="developer, full-stack, react, typescript, portfolio" />
-      </Helmet>
-
       {/* Hero Section */}
       <section className="hero">
         <div className="hero-content">
