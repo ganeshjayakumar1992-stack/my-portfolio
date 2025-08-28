@@ -23,7 +23,8 @@ export default defineConfig({
       }
     },
     
-    // Code splitting and chunk optimization
+    // Ensure proper asset handling for Vercel
+    assetsDir: 'assets',
     rollupOptions: {
       output: {
         // Manual chunk splitting for better caching
@@ -35,17 +36,7 @@ export default defineConfig({
           'router': ['react-router-dom']
         },
         
-        // Chunk naming for better caching
-        chunkFileNames: (chunkInfo) => {
-          const facadeModuleId = chunkInfo.facadeModuleId
-          if (facadeModuleId) {
-            const fileName = facadeModuleId.split('/').pop()?.replace('.tsx', '') || 'chunk'
-            return `js/${fileName}-[hash].js`
-          }
-          return 'js/[name]-[hash].js'
-        },
-        
-        // Asset naming
+        // Ensure proper asset naming for Vercel
         assetFileNames: (assetInfo) => {
           const info = assetInfo.name?.split('.') || []
           const ext = info[info.length - 1]
@@ -56,9 +47,15 @@ export default defineConfig({
             return `images/[name]-[hash].${ext}`
           }
           return `assets/[name]-[hash].${ext}`
-        }
+        },
+        
+        // Ensure proper chunk naming for Vercel
+        chunkFileNames: 'js/[name]-[hash].js',
+        entryFileNames: 'js/[name]-[hash].js'
       }
     },
+    
+
     
     // Bundle size analysis
     reportCompressedSize: true,
