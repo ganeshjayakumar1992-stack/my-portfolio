@@ -2,6 +2,7 @@
   "buildCommand": "npm run build:vercel",
   "outputDirectory": "dist",
   "framework": "vite",
+  "installCommand": "npm install",
   "rewrites": [
     {
       "source": "/(.*)",
@@ -92,5 +93,9 @@
   "env": {
     "NODE_ENV": "production",
     "VITE_APP_ENV": "production"
+  },
+  "github": {
+    "enabled": true,
+    "silent": false
   }
 }
