@@ -1,113 +1,134 @@
+import { FadeInUp } from '../components/animations'
+import { ABOUT, SKILLS, EXPERIENCE, ANIMATION_DELAYS } from '../constants/labels'
+
 const About = () => {
   return (
     <div className="section">
       <div className="container">
-        <div className="section-header">
-          <h1 className="section-title">About Me</h1>
-          <p className="section-subtitle">
-            Get to know me better - my background, skills, and what drives me as a developer.
-          </p>
-        </div>
+        <FadeInUp>
+          <div className="section-header">
+            <h1 className="section-title">{ABOUT.SECTION_TITLE}</h1>
+            <p className="section-subtitle">
+              Get to know me better - my background, skills, and what drives me as a developer.
+            </p>
+          </div>
+        </FadeInUp>
 
         {/* Who I Am */}
         <div className="about-grid">
-          <div className="about-card">
-            <div className="card-icon">👨‍💻</div>
-            <h3 className="card-title">Who I Am</h3>
-            <p className="card-description">
-              I'm a passionate full-stack developer with a love for creating innovative solutions. 
-              I believe in writing clean, maintainable code and solving real-world problems through technology.
-            </p>
-          </div>
+          <FadeInUp delay={ANIMATION_DELAYS.CARD_1}>
+            <div className="about-card glass-card">
+              <div className="card-icon">👨‍💻</div>
+              <h3 className="card-title">{ABOUT.WHO_I_AM.TITLE}</h3>
+              <p className="card-description">
+                {ABOUT.WHO_I_AM.DESCRIPTION}
+              </p>
+            </div>
+          </FadeInUp>
 
-          <div className="about-card">
-            <div className="card-icon">🚀</div>
-            <h3 className="card-title">My Mission</h3>
-            <p className="card-description">
-              To build applications that make a difference, learn continuously, and share knowledge 
-              with the developer community. Every project is an opportunity to grow and innovate.
-            </p>
-          </div>
+          <FadeInUp delay={ANIMATION_DELAYS.CARD_2}>
+            <div className="about-card glass-card">
+              <div className="card-icon">🚀</div>
+              <h3 className="card-title">{ABOUT.MISSION.TITLE}</h3>
+              <p className="card-description">
+                {ABOUT.MISSION.DESCRIPTION}
+              </p>
+            </div>
+          </FadeInUp>
 
-          <div className="about-card">
-            <div className="card-icon">🎯</div>
-            <h3 className="card-title">My Approach</h3>
-            <p className="card-description">
-              I focus on user experience, performance, and scalability. I believe the best code 
-              is the one that solves problems elegantly and efficiently.
-            </p>
-          </div>
+          <FadeInUp delay={ANIMATION_DELAYS.CARD_3}>
+            <div className="about-card glass-card">
+              <div className="card-icon">🎯</div>
+              <h3 className="card-title">{ABOUT.APPROACH.TITLE}</h3>
+              <p className="card-description">
+                {ABOUT.APPROACH.DESCRIPTION}
+              </p>
+            </div>
+          </FadeInUp>
         </div>
 
         {/* Skills Section */}
-        <div className="section-header" style={{ marginTop: '5rem' }}>
-          <h2 className="section-title">My Skills</h2>
-          <p className="section-subtitle">
-            Here are the technologies and tools I work with to bring ideas to life.
-          </p>
-        </div>
+        <FadeInUp delay={0.4}>
+          <div className="section-header" style={{ marginTop: '5rem' }}>
+            <h2 className="section-title">{SKILLS.SECTION_TITLE}</h2>
+            <p className="section-subtitle">
+              {SKILLS.SECTION_SUBTITLE}
+            </p>
+          </div>
+        </FadeInUp>
 
         <div className="about-grid">
-          <div className="about-card">
-            <div className="card-icon">⚛️</div>
-            <h3 className="card-title">Frontend</h3>
-            <p className="card-description">
-              React, TypeScript, JavaScript, HTML5, CSS3, Responsive Design, Modern CSS (Grid, Flexbox)
-            </p>
-          </div>
+          <FadeInUp delay={0.5}>
+            <div className="about-card glass-card">
+              <div className="card-icon">⚛️</div>
+              <h3 className="card-title">{SKILLS.FRONTEND.TITLE}</h3>
+              <p className="card-description">
+                {SKILLS.FRONTEND.DESCRIPTION}
+              </p>
+            </div>
+          </FadeInUp>
 
-          <div className="about-card">
-            <div className="card-icon">🔧</div>
-            <h3 className="card-title">Backend</h3>
-            <p className="card-description">
-              Node.js, Express.js, REST APIs, Database Design, Authentication, Serverless Functions
-            </p>
-          </div>
+          <FadeInUp delay={0.6}>
+            <div className="about-card glass-card">
+              <div className="card-icon">🔧</div>
+              <h3 className="card-title">{SKILLS.BACKEND.TITLE}</h3>
+              <p className="card-description">
+                {SKILLS.BACKEND.DESCRIPTION}
+              </p>
+            </div>
+          </FadeInUp>
 
-          <div className="about-card">
-            <div className="card-icon">🛠️</div>
-            <h3 className="card-title">Tools & DevOps</h3>
-            <p className="card-description">
-              Git, GitHub, Vercel, Vite, npm, VS Code, Terminal, CI/CD, Performance Optimization
-            </p>
-          </div>
+          <FadeInUp delay={0.7}>
+            <div className="about-card glass-card">
+              <div className="card-icon">🛠️</div>
+              <h3 className="card-title">{SKILLS.TOOLS_DEVOPS.TITLE}</h3>
+              <p className="card-description">
+                {SKILLS.TOOLS_DEVOPS.DESCRIPTION}
+              </p>
+            </div>
+          </FadeInUp>
         </div>
 
         {/* Experience Section */}
-        <div className="section-header" style={{ marginTop: '5rem' }}>
-          <h2 className="section-title">Experience</h2>
-          <p className="section-subtitle">
-            My journey in software development and the projects that shaped my skills.
-          </p>
-        </div>
+        <FadeInUp delay={0.8}>
+          <div className="section-header" style={{ marginTop: '5rem' }}>
+            <h2 className="section-title">{EXPERIENCE.SECTION_TITLE}</h2>
+            <p className="section-subtitle">
+              {EXPERIENCE.SECTION_SUBTITLE}
+            </p>
+          </div>
+        </FadeInUp>
 
         <div className="about-grid">
-          <div className="about-card">
-            <div className="card-icon">💼</div>
-            <h3 className="card-title">Professional Experience</h3>
-            <p className="card-description">
-              I've worked on various projects ranging from small business websites to complex 
-              enterprise applications, always focusing on delivering value and quality.
-            </p>
-          </div>
+          <FadeInUp delay={0.9}>
+            <div className="about-card glass-card">
+              <div className="card-icon">💼</div>
+              <h3 className="card-title">{EXPERIENCE.PROFESSIONAL.TITLE}</h3>
+              <p className="card-description">
+                {EXPERIENCE.PROFESSIONAL.DESCRIPTION}
+              </p>
+            </div>
+          </FadeInUp>
 
-          <div className="about-card">
-            <div className="card-icon">🎓</div>
-            <h3 className="card-title">Continuous Learning</h3>
-            <p className="card-description">
-              I'm constantly learning new technologies and best practices to stay current 
-              with the ever-evolving world of web development.
-            </p>
-          </div>
+          <FadeInUp delay={1.0}>
+            <div className="about-card glass-card">
+              <div className="card-icon">🎓</div>
+              <h3 className="card-title">{EXPERIENCE.LEARNING.TITLE}</h3>
+              <p className="card-description">
+                {EXPERIENCE.LEARNING.DESCRIPTION}
+              </p>
+            </div>
+          </FadeInUp>
 
-          <div className="about-card">
-            <div className="card-icon">🤝</div>
-            <h3 className="card-title">Collaboration</h3>
-            <p className="card-description">
-              I believe in the power of teamwork and knowledge sharing. I enjoy collaborating 
-              with other developers and contributing to open-source projects.
-            </p>
-          </div>
+          <FadeInUp delay={1.1}>
+            <div className="about-card glass-card">
+              <div className="card-icon">🤝</div>
+              <h3 className="card-title">{EXPERIENCE.COLLABORATION.TITLE}</h3>
+              <p className="card-description">
+                {EXPERIENCE.COLLABORATION.DESCRIPTION}
+              </p>
+            </div>
+          </FadeInUp>
         </div>
       </div>
     </div>
