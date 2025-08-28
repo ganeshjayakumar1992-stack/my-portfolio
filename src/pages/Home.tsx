@@ -3,10 +3,18 @@ import { motion } from 'framer-motion'
 import { ArrowRight, Sparkles, Code, Zap } from 'lucide-react'
 import { FadeInUp } from '../components/animations'
 import { HERO, ABOUT, PROJECTS, CTA, ANIMATION_DELAYS } from '../constants/labels'
+import SEOHead from '../components/seo/SEOHead'
 
 const Home = () => {
   return (
     <>
+      <SEOHead 
+        title="Home"
+        description="Full Stack Developer specializing in React, TypeScript, and modern web technologies. View my portfolio, projects, and get in touch for collaboration."
+        keywords={['React Developer', 'TypeScript Developer', 'Full Stack Developer', 'Web Development']}
+        type="website"
+      />
+      
       {/* Hero Section */}
       <section className="hero">
         <div className="hero-content">

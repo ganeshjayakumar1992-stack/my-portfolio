@@ -1,5 +1,6 @@
 /* Modern Portfolio CSS - No Tailwind Dependencies */
 @import './styles/mobile-navigation.css';
+@import './styles/performance-optimization.css';
 
 /* CSS Variables for consistent theming */
 :root {
