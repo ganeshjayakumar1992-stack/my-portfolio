@@ -31,6 +31,46 @@ const PerformanceMonitor: React.FC<PerformanceMonitorProps> = ({ showDetails = f
   const [isVisible, setIsVisible] = useState(false)
   const [performanceScore, setPerformanceScore] = useState<number>(0)
 
+  const calculatePerformanceScore = useCallback(() => {
+    let score = 100
+    let totalMetrics = 0
+
+    if (metrics.fcp !== null) {
+      totalMetrics++
+      if (metrics.fcp > 1800) score -= 20
+      else if (metrics.fcp > 1000) score -= 10
+    }
+
+    if (metrics.lcp !== null) {
+      totalMetrics++
+      if (metrics.lcp > 4000) score -= 20
+      else if (metrics.lcp > 2500) score -= 10
+    }
+
+    if (metrics.fid !== null) {
+      totalMetrics++
+      if (metrics.fid > 300) score -= 20
+      else if (metrics.fid > 100) score -= 10
+    }
+
+    if (metrics.cls !== null) {
+      totalMetrics++
+      if (metrics.cls > 0.25) score -= 20
+      else if (metrics.cls > 0.1) score -= 10
+    }
+
+    if (metrics.ttfb !== null) {
+      totalMetrics++
+      if (metrics.ttfb > 800) score -= 20
+      else if (metrics.ttfb > 600) score -= 10
+    }
+
+    if (totalMetrics > 0) {
+      score = Math.max(0, score)
+      setPerformanceScore(score)
+    }
+  }, [metrics])
+
   const measurePerformance = useCallback(() => {
     // First Contentful Paint (FCP)
     if ('PerformanceObserver' in window) {
@@ -120,46 +160,6 @@ const PerformanceMonitor: React.FC<PerformanceMonitorProps> = ({ showDetails = f
       measurePerformance()
     }
   }, [showDetails, measurePerformance])
-
-  const calculatePerformanceScore = useCallback(() => {
-    let score = 100
-    let totalMetrics = 0
-
-    if (metrics.fcp !== null) {
-      totalMetrics++
-      if (metrics.fcp > 1800) score -= 20
-      else if (metrics.fcp > 1000) score -= 10
-    }
-
-    if (metrics.lcp !== null) {
-      totalMetrics++
-      if (metrics.lcp > 4000) score -= 20
-      else if (metrics.lcp > 2500) score -= 10
-    }
-
-    if (metrics.fid !== null) {
-      totalMetrics++
-      if (metrics.fid > 300) score -= 20
-      else if (metrics.fid > 100) score -= 10
-    }
-
-    if (metrics.cls !== null) {
-      totalMetrics++
-      if (metrics.cls > 0.25) score -= 20
-      else if (metrics.cls > 0.1) score -= 10
-    }
-
-    if (metrics.ttfb !== null) {
-      totalMetrics++
-      if (metrics.ttfb > 800) score -= 20
-      else if (metrics.ttfb > 600) score -= 10
-    }
-
-    if (totalMetrics > 0) {
-      score = Math.max(0, score)
-      setPerformanceScore(score)
-    }
-  }, [metrics])
 
   const getMetricStatus = (metric: keyof PerformanceMetrics, value: number | null) => {
     if (value === null) return 'unknown'

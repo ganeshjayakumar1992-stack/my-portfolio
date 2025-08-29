@@ -10,7 +10,7 @@ interface Project {
   image: string
   technologies: string[]
   liveUrl?: string
-  githubUrl: string
+  githubUrl?: string
   category: string
   featured: boolean
   completionDate: string

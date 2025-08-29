@@ -1,5 +1,5 @@
 import React, { useEffect, useState } from 'react'
-import { AccessibilityContext, AccessibilityContextType } from './context'
+import { AccessibilityContext, type AccessibilityContextType } from './context'
 
 interface AccessibilityProviderProps {
   children: React.ReactNode
