@@ -1,2 +1,2 @@
-export { default as AccessibilityProvider } from './AccessibilityProvider'
-export { useAccessibility } from './AccessibilityProvider'
+export { AccessibilityProvider } from './AccessibilityProvider'
+export { useAccessibility } from './useAccessibility'

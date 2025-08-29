@@ -2,8 +2,22 @@ import { motion } from 'framer-motion'
 import { FadeInUp } from '../components/animations'
 import { ProjectGallery } from '../components/portfolio'
 
+// Define Project interface
+interface Project {
+  id: string
+  title: string
+  description: string
+  image: string
+  technologies: string[]
+  liveUrl?: string
+  githubUrl: string
+  category: string
+  featured: boolean
+  completionDate: string
+}
+
 // Sample project data - in a real app, this would come from an API or CMS
-const sampleProjects = [
+const sampleProjects: Project[] = [
   {
     id: '1',
     title: 'E-Commerce Platform',
@@ -79,7 +93,7 @@ const sampleProjects = [
 ]
 
 const Projects = () => {
-  const handleProjectClick = (project: any) => {
+  const handleProjectClick = (project: Project) => {
     // You could open a modal, navigate to a detail page, or perform other actions
     console.log('Project clicked:', project)
   }

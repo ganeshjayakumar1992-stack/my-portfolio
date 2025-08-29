@@ -1,4 +1,4 @@
-import React, { useEffect, useState } from 'react'
+import React, { useEffect, useState, useCallback } from 'react'
 import { motion, AnimatePresence } from 'framer-motion'
 import { Activity, TrendingUp, TrendingDown, AlertTriangle } from 'lucide-react'
 
@@ -14,6 +14,12 @@ interface PerformanceMonitorProps {
   showDetails?: boolean
 }
 
+// Define proper types for performance entries
+interface LayoutShiftEntry extends PerformanceEntry {
+  hadRecentInput: boolean
+  value: number
+}
+
 const PerformanceMonitor: React.FC<PerformanceMonitorProps> = ({ showDetails = false }) => {
   const [metrics, setMetrics] = useState<PerformanceMetrics>({
     fcp: null,
@@ -25,15 +31,7 @@ const PerformanceMonitor: React.FC<PerformanceMonitorProps> = ({ showDetails = f
   const [isVisible, setIsVisible] = useState(false)
   const [performanceScore, setPerformanceScore] = useState<number>(0)
 
-  useEffect(() => {
-    // Only run in production or when explicitly enabled
-    if (process.env.NODE_ENV === 'production' || showDetails) {
-      setIsVisible(true)
-      measurePerformance()
-    }
-  }, [showDetails])
-
-  const measurePerformance = () => {
+  const measurePerformance = useCallback(() => {
     // First Contentful Paint (FCP)
     if ('PerformanceObserver' in window) {
       try {
@@ -85,9 +83,12 @@ const PerformanceMonitor: React.FC<PerformanceMonitorProps> = ({ showDetails = f
         const clsObserver = new PerformanceObserver((list) => {
           const entries = list.getEntries()
           entries.forEach(entry => {
-            if (entry.entryType === 'layout-shift' && !(entry as any).hadRecentInput) {
-              clsValue += (entry as any).value
-              setMetrics(prev => ({ ...prev, cls: clsValue }))
+            if (entry.entryType === 'layout-shift') {
+              const layoutShiftEntry = entry as LayoutShiftEntry
+              if (!layoutShiftEntry.hadRecentInput) {
+                clsValue += layoutShiftEntry.value
+                setMetrics(prev => ({ ...prev, cls: clsValue }))
+              }
             }
           })
         })
@@ -110,9 +111,17 @@ const PerformanceMonitor: React.FC<PerformanceMonitorProps> = ({ showDetails = f
     setTimeout(() => {
       calculatePerformanceScore()
     }, 3000)
-  }
+  }, [calculatePerformanceScore])
 
-  const calculatePerformanceScore = () => {
+  useEffect(() => {
+    // Only run in production or when explicitly enabled
+    if (process.env.NODE_ENV === 'production' || showDetails) {
+      setIsVisible(true)
+      measurePerformance()
+    }
+  }, [showDetails, measurePerformance])
+
+  const calculatePerformanceScore = useCallback(() => {
     let score = 100
     let totalMetrics = 0
 
@@ -150,7 +159,7 @@ const PerformanceMonitor: React.FC<PerformanceMonitorProps> = ({ showDetails = f
       score = Math.max(0, score)
       setPerformanceScore(score)
     }
-  }
+  }, [metrics])
 
   const getMetricStatus = (metric: keyof PerformanceMetrics, value: number | null) => {
     if (value === null) return 'unknown'

@@ -38,7 +38,7 @@ export const ProjectGallery: React.FC<ProjectGalleryProps> = ({
 
   // Filter and sort projects
   const filteredProjects = useMemo(() => {
-    let filtered = projects.filter(project => {
+    const filtered = projects.filter(project => {
       const matchesSearch = project.title.toLowerCase().includes(searchTerm.toLowerCase()) ||
                            project.description.toLowerCase().includes(searchTerm.toLowerCase()) ||
                            project.technologies.some(tech => tech.toLowerCase().includes(searchTerm.toLowerCase()))

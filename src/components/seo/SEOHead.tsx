@@ -1,4 +1,4 @@
-import React, { useEffect } from 'react'
+import React, { useEffect, useCallback, useMemo } from 'react'
 
 interface SEOHeadProps {
   title: string
@@ -23,52 +23,24 @@ const SEOHead: React.FC<SEOHeadProps> = ({
   type = 'website'
 }) => {
   const fullTitle = `${title} | Ganesh Jayakumar - Full Stack Developer`
-  const defaultKeywords = [
-    'Ganesh Jayakumar',
-    'Full Stack Developer',
-    'React Developer',
-    'TypeScript Developer',
-    'Web Development',
-    'Portfolio',
-    'Software Engineer',
-    'Frontend Developer',
-    'Backend Developer',
-    'JavaScript Developer'
-  ]
   
-  const allKeywords = [...new Set([...defaultKeywords, ...keywords])]
+  const allKeywords = useMemo(() => {
+    const defaultKeywords = [
+      'Ganesh Jayakumar',
+      'Full Stack Developer',
+      'React Developer',
+      'TypeScript Developer',
+      'Web Development',
+      'Portfolio',
+      'Software Engineer',
+      'Frontend Developer',
+      'Backend Developer',
+      'JavaScript Developer'
+    ]
+    return [...new Set([...defaultKeywords, ...keywords])]
+  }, [keywords])
 
-  // Update document title and meta tags
-  useEffect(() => {
-    // Update document title
-    document.title = fullTitle
-    
-    // Update meta description
-    let metaDescription = document.querySelector('meta[name="description"]')
-    if (!metaDescription) {
-      metaDescription = document.createElement('meta')
-      metaDescription.setAttribute('name', 'description')
-      document.head.appendChild(metaDescription)
-    }
-    metaDescription.setAttribute('content', description)
-    
-    // Update meta keywords
-    let metaKeywords = document.querySelector('meta[name="keywords"]')
-    if (!metaKeywords) {
-      metaKeywords = document.createElement('meta')
-      metaKeywords.setAttribute('name', 'keywords')
-      document.head.appendChild(metaKeywords)
-    }
-    metaKeywords.setAttribute('content', allKeywords.join(', '))
-    
-    // Update Open Graph tags
-    updateOpenGraphTags()
-    
-    // Add structured data
-    addStructuredData()
-  }, [fullTitle, description, allKeywords, type, url, image])
-
-  const updateOpenGraphTags = () => {
+  const updateOpenGraphTags = useCallback(() => {
     const ogTags = [
       { property: 'og:title', content: fullTitle },
       { property: 'og:description', content: description },
@@ -88,9 +60,9 @@ const SEOHead: React.FC<SEOHeadProps> = ({
       }
       metaTag.setAttribute('content', tag.content)
     })
-  }
+  }, [fullTitle, description, type, url, image])
 
-  const addStructuredData = () => {
+  const addStructuredData = useCallback(() => {
     // Remove existing structured data
     const existingScripts = document.querySelectorAll('script[type="application/ld+json"]')
     existingScripts.forEach(script => script.remove())
@@ -143,7 +115,37 @@ const SEOHead: React.FC<SEOHeadProps> = ({
     websiteScript.type = 'application/ld+json'
     websiteScript.textContent = JSON.stringify(websiteSchema)
     document.head.appendChild(websiteScript)
-  }
+  }, [])
+
+  // Update document title and meta tags
+  useEffect(() => {
+    // Update document title
+    document.title = fullTitle
+    
+    // Update meta description
+    let metaDescription = document.querySelector('meta[name="description"]')
+    if (!metaDescription) {
+      metaDescription = document.createElement('meta')
+      metaDescription.setAttribute('name', 'description')
+      document.head.appendChild(metaDescription)
+    }
+    metaDescription.setAttribute('content', description)
+    
+    // Update meta keywords
+    let metaKeywords = document.querySelector('meta[name="keywords"]')
+    if (!metaKeywords) {
+      metaKeywords = document.createElement('meta')
+      metaKeywords.setAttribute('name', 'keywords')
+      document.head.appendChild(metaKeywords)
+    }
+    metaKeywords.setAttribute('content', allKeywords.join(', '))
+    
+    // Update Open Graph tags
+    updateOpenGraphTags()
+    
+    // Add structured data
+    addStructuredData()
+  }, [fullTitle, description, allKeywords, type, url, image, updateOpenGraphTags, addStructuredData])
 
   return null
 }

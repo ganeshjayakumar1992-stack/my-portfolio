@@ -1,24 +1,29 @@
 import { useState, useEffect } from 'react'
 
-interface PWAInstallPrompt {
-  prompt: () => Promise<void>
+// Define proper types for PWA functionality
+interface BeforeInstallPromptEvent extends Event {
+  prompt(): Promise<void>
   userChoice: Promise<{ outcome: 'accepted' | 'dismissed' }>
+}
+
+interface NavigatorStandalone extends Navigator {
+  standalone?: boolean
 }
 
 interface PWAState {
   isInstallable: boolean
   isInstalled: boolean
-  isOffline: boolean
   isOnline: boolean
-  deferredPrompt: PWAInstallPrompt | null
+  isOffline: boolean
+  deferredPrompt: BeforeInstallPromptEvent | null
 }
 
 export const usePWA = () => {
   const [pwaState, setPwaState] = useState<PWAState>({
     isInstallable: false,
     isInstalled: false,
-    isOffline: false,
-    isOnline: true,
+    isOnline: navigator.onLine,
+    isOffline: !navigator.onLine,
     deferredPrompt: null
   })
 
@@ -26,7 +31,7 @@ export const usePWA = () => {
     // Check if app is installed
     const checkIfInstalled = () => {
       const isInstalled = window.matchMedia('(display-mode: standalone)').matches ||
-                         (window.navigator as any).standalone === true
+                         (window.navigator as NavigatorStandalone).standalone === true
       
       setPwaState(prev => ({ ...prev, isInstalled }))
     }
@@ -46,7 +51,7 @@ export const usePWA = () => {
       setPwaState(prev => ({
         ...prev,
         isInstallable: true,
-        deferredPrompt: e as any
+        deferredPrompt: e as BeforeInstallPromptEvent
       }))
     }
 
@@ -145,7 +150,7 @@ export const usePWA = () => {
   }
 
   // Send message to service worker
-  const sendMessageToSW = (message: any) => {
+  const sendMessageToSW = (message: Record<string, unknown>) => {
     if ('serviceWorker' in navigator && navigator.serviceWorker.controller) {
       navigator.serviceWorker.controller.postMessage(message)
     }

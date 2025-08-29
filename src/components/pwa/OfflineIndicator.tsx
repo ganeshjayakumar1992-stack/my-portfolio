@@ -4,10 +4,7 @@ import { Wifi, WifiOff, RefreshCw } from 'lucide-react'
 import { usePWA } from '../../hooks/usePWA'
 
 const OfflineIndicator: React.FC = () => {
-  const { isOffline, isOnline } = React.useMemo(() => {
-    const { isOffline, isOnline } = usePWA()
-    return { isOffline, isOnline }
-  }, [])
+  const { isOffline, isOnline } = usePWA()
 
   const handleRefresh = () => {
     window.location.reload()

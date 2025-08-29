@@ -1,23 +1,5 @@
-import React, { createContext, useContext, useEffect, useState } from 'react'
-
-interface AccessibilityContextType {
-  announceToScreenReader: (message: string) => void
-  setFocus: (elementId: string) => void
-  isKeyboardUser: boolean
-  setKeyboardUser: (value: boolean) => void
-  skipToMainContent: () => void
-  skipToNavigation: () => void
-}
-
-const AccessibilityContext = createContext<AccessibilityContextType | undefined>(undefined)
-
-export const useAccessibility = () => {
-  const context = useContext(AccessibilityContext)
-  if (!context) {
-    throw new Error('useAccessibility must be used within an AccessibilityProvider')
-  }
-  return context
-}
+import React, { useEffect, useState } from 'react'
+import { AccessibilityContext, AccessibilityContextType } from './context'
 
 interface AccessibilityProviderProps {
   children: React.ReactNode
