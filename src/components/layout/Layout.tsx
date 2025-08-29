@@ -13,14 +13,21 @@ interface LayoutProps {
 const Layout = ({ children }: LayoutProps) => {
   return (
     <AccessibilityProvider>
-      <EnhancedHeader />
-      <main style={{ paddingTop: '5rem' }}>
-        {children}
-      </main>
-      <Footer />
-      <InstallPrompt />
-      <OfflineIndicator />
-      <PerformanceMonitor showDetails={process.env.NODE_ENV === 'development'} />
+      <div className="app-layout">
+        <EnhancedHeader />
+        <main 
+          id="main-content" 
+          role="main" 
+          aria-label="Main content"
+          style={{ paddingTop: '5rem' }}
+        >
+          {children}
+        </main>
+        <Footer />
+        <InstallPrompt />
+        <OfflineIndicator />
+        <PerformanceMonitor showDetails={process.env.NODE_ENV === 'development'} />
+      </div>
     </AccessibilityProvider>
   )
 }
