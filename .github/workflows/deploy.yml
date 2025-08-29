@@ -1,4 +1,4 @@
-name: 🚀 Deploy Portfolio to Netlify
+name: 🚀 Deploy Portfolio
 
 on:
   push:
@@ -184,14 +184,15 @@ jobs:
             http://localhost:4173/about
             http://localhost:4173/projects
             http://localhost:4173/contact
-          uploadArtifacts: true
-          temporaryPublicStorage: true
+          # Disabled artifacts to avoid GitHub Actions artifact naming conflicts
+          uploadArtifacts: false
+          temporaryPublicStorage: false
           configPath: './.lighthouserc.json'
           
       - name: 📈 Performance report
         run: |
           echo "📊 Performance testing completed!"
-          echo "🔍 Check the Lighthouse CI artifacts for detailed reports"
+          echo "🔍 Lighthouse CI analysis completed successfully"
 
   # Security Scan
   security-scan:
