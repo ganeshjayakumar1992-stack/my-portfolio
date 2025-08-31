@@ -155,6 +155,9 @@ git push --force origin main
 git checkout f933f17 -- src/index.css
 git checkout f933f17 -- src/App.tsx
 git checkout f933f17 -- src/main.tsx
+
+# Latest fix (if needed)
+git reset --hard 96493e7
 ```
 
 ---

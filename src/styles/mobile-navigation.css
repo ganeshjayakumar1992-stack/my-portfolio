@@ -245,6 +245,7 @@
   height: 80px;
   position: relative;
   overflow: hidden;
+  gap: 2rem;
 }
 
 .header-container::before {
@@ -273,19 +274,23 @@
 }
 
 .logo-image {
-  width: 6rem;
-  height: 2rem;
-  border-radius: 12px;
+  width: 3.5rem;
+  height: 3.5rem;
+  border-radius: 50%;
   object-fit: cover;
-  box-shadow: var(--shadow-md);
+  box-shadow: var(--shadow-lg);
   transition: var(--transition-medium);
-  filter: brightness(1.1) contrast(1.1) saturate(1.1);
+  filter: brightness(1.05) contrast(1.05);
+  border: 2px solid rgba(255, 255, 255, 0.1);
+  background: var(--gradient-accent);
+  padding: 0.25rem;
 }
 
 .logo-image:hover {
-  transform: scale(1.05);
-  box-shadow: var(--shadow-lg);
-  filter: brightness(1.2) contrast(1.2) saturate(1.2);
+  transform: scale(1.1) rotate(5deg);
+  box-shadow: var(--shadow-2xl);
+  filter: brightness(1.1) contrast(1.1);
+  border-color: rgba(255, 255, 255, 0.2);
 }
 
 .logo-text-container {

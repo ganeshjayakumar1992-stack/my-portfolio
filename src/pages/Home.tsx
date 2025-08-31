@@ -15,24 +15,54 @@ const Home = () => {
         type="website"
       />
       
-      {/* Hero Section - Modern Full Screen */}
+      {/* Hero Section - Enhanced with Better UX */}
       <section className="hero">
         <div className="hero-content">
+          {/* Animated Background Elements */}
+          <div className="hero-background-elements">
+            <motion.div
+              className="floating-element"
+              animate={{ 
+                y: [0, -20, 0],
+                rotate: [0, 5, 0]
+              }}
+              transition={{ 
+                duration: 6,
+                repeat: Infinity,
+                ease: "easeInOut"
+              }}
+            />
+            <motion.div
+              className="floating-element"
+              animate={{ 
+                y: [0, 15, 0],
+                rotate: [0, -5, 0]
+              }}
+              transition={{ 
+                duration: 8,
+                repeat: Infinity,
+                ease: "easeInOut",
+                delay: 2
+              }}
+            />
+          </div>
+
           <motion.div
-            initial={{ opacity: 0, y: 20 }}
-            animate={{ opacity: 1, y: 0 }}
-            transition={{ duration: 0.6 }}
+            initial={{ opacity: 0, y: 20, scale: 0.9 }}
+            animate={{ opacity: 1, y: 0, scale: 1 }}
+            transition={{ duration: 0.8, ease: "easeOut" }}
             className="hero-badge"
+            whileHover={{ scale: 1.05, rotate: 2 }}
           >
-            <Sparkles className="w-4 h-4" />
+            <Sparkles className="w-4 h-4 animate-pulse" />
             <span>{HERO.BADGE_TEXT}</span>
           </motion.div>
           
           <motion.h1 
             className="hero-title"
-            initial={{ opacity: 0, y: 30 }}
+            initial={{ opacity: 0, y: 40 }}
             animate={{ opacity: 1, y: 0 }}
-            transition={{ duration: 0.8, delay: ANIMATION_DELAYS.HERO_TITLE }}
+            transition={{ duration: 1, delay: 0.2, ease: "easeOut" }}
           >
             {HERO.TITLE}
           </motion.h1>
@@ -41,7 +71,7 @@ const Home = () => {
             className="hero-subtitle"
             initial={{ opacity: 0, y: 30 }}
             animate={{ opacity: 1, y: 0 }}
-            transition={{ duration: 0.8, delay: ANIMATION_DELAYS.HERO_SUBTITLE }}
+            transition={{ duration: 1, delay: 0.4, ease: "easeOut" }}
           >
             {HERO.SUBTITLE}
           </motion.p>
@@ -50,15 +80,39 @@ const Home = () => {
             className="hero-buttons"
             initial={{ opacity: 0, y: 30 }}
             animate={{ opacity: 1, y: 0 }}
-            transition={{ duration: 0.8, delay: ANIMATION_DELAYS.HERO_BUTTONS }}
+            transition={{ duration: 1, delay: 0.6, ease: "easeOut" }}
           >
-            <Link to="/projects" className="btn-primary">
-              {HERO.PRIMARY_BUTTON}
-              <ArrowRight className="w-4 h-4 ml-2" />
-            </Link>
-            <Link to="/contact" className="btn-secondary">
-              {HERO.SECONDARY_BUTTON}
-            </Link>
+            <motion.div
+              whileHover={{ scale: 1.05 }}
+              whileTap={{ scale: 0.95 }}
+            >
+              <Link to="/projects" className="btn-primary">
+                {HERO.PRIMARY_BUTTON}
+                <ArrowRight className="w-4 h-4 ml-2" />
+              </Link>
+            </motion.div>
+            <motion.div
+              whileHover={{ scale: 1.05 }}
+              whileTap={{ scale: 0.95 }}
+            >
+              <Link to="/contact" className="btn-secondary">
+                {HERO.SECONDARY_BUTTON}
+              </Link>
+            </motion.div>
+          </motion.div>
+
+          {/* Scroll Indicator */}
+          <motion.div
+            className="scroll-indicator"
+            initial={{ opacity: 0 }}
+            animate={{ opacity: 1 }}
+            transition={{ delay: 1.2, duration: 0.8 }}
+          >
+            <motion.div
+              className="scroll-arrow"
+              animate={{ y: [0, 10, 0] }}
+              transition={{ duration: 2, repeat: Infinity, ease: "easeInOut" }}
+            />
           </motion.div>
         </div>
       </section>
