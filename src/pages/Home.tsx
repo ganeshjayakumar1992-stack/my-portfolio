@@ -18,33 +18,93 @@ const Home = () => {
       {/* Hero Section - Enhanced with Better UX */}
       <section className="hero">
         <div className="hero-content">
-          {/* Animated Background Elements */}
-          <div className="hero-background-elements">
+          {/* Advanced AI & Medical Animations */}
+          <div className="hero-advanced-animations">
+            {/* AI Brain Network */}
             <motion.div
-              className="floating-element"
+              className="ai-brain-network"
               animate={{ 
-                y: [0, -20, 0],
-                rotate: [0, 5, 0]
-              }}
-              transition={{ 
-                duration: 6,
-                repeat: Infinity,
-                ease: "easeInOut"
-              }}
-            />
-            <motion.div
-              className="floating-element"
-              animate={{ 
-                y: [0, 15, 0],
-                rotate: [0, -5, 0]
+                scale: [1, 1.1, 1],
+                opacity: [0.3, 0.6, 0.3]
               }}
               transition={{ 
                 duration: 8,
+                repeat: Infinity,
+                ease: "easeInOut"
+              }}
+            >
+              <div className="neural-node" />
+              <div className="neural-node" />
+              <div className="neural-node" />
+              <div className="neural-connection" />
+            </motion.div>
+
+            {/* Medical Cross */}
+            <motion.div
+              className="medical-cross"
+              animate={{ 
+                rotate: [0, 360],
+                scale: [1, 1.2, 1]
+              }}
+              transition={{ 
+                duration: 12,
+                repeat: Infinity,
+                ease: "linear"
+              }}
+            />
+
+            {/* Code Particles */}
+            <motion.div
+              className="code-particles"
+              animate={{ 
+                y: [0, -100],
+                opacity: [0, 1, 0]
+              }}
+              transition={{ 
+                duration: 4,
+                repeat: Infinity,
+                ease: "easeInOut",
+                delay: 1
+              }}
+            >
+              <span className="code-particle">01</span>
+              <span className="code-particle">AI</span>
+              <span className="code-particle">ML</span>
+            </motion.div>
+
+            {/* Salesforce Lightning */}
+            <motion.div
+              className="salesforce-lightning"
+              animate={{ 
+                pathLength: [0, 1, 0],
+                opacity: [0, 1, 0]
+              }}
+              transition={{ 
+                duration: 3,
                 repeat: Infinity,
                 ease: "easeInOut",
                 delay: 2
               }}
             />
+
+            {/* Floating Data Points */}
+            <motion.div
+              className="data-points"
+              animate={{ 
+                y: [0, -30, 0],
+                x: [0, 10, 0]
+              }}
+              transition={{ 
+                duration: 6,
+                repeat: Infinity,
+                ease: "easeInOut",
+                delay: 0.5
+              }}
+            >
+              <div className="data-point" />
+              <div className="data-point" />
+              <div className="data-point" />
+            </motion.div>
           </div>
 
           <motion.div
@@ -63,8 +123,24 @@ const Home = () => {
             initial={{ opacity: 0, y: 40 }}
             animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 1, delay: 0.2, ease: "easeOut" }}
+            whileHover={{ 
+              scale: 1.02,
+              transition: { duration: 0.3 }
+            }}
           >
-            {HERO.TITLE}
+            <motion.span
+              className="title-word"
+              animate={{ 
+                backgroundPosition: ["0% 50%", "100% 50%", "0% 50%"]
+              }}
+              transition={{ 
+                duration: 5,
+                repeat: Infinity,
+                ease: "linear"
+              }}
+            >
+              {HERO.TITLE}
+            </motion.span>
           </motion.h1>
           
           <motion.p 

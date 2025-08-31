@@ -3,7 +3,6 @@ import { motion, AnimatePresence } from 'framer-motion'
 import { Link, useLocation } from 'react-router-dom'
 import { Menu, X, Github, Linkedin } from 'lucide-react'
 import MobileNavigation from '../navigation/MobileNavigation'
-import portfolioLogo from '../../assets/PortfolioLogo.png'
 
 const EnhancedHeader: React.FC = () => {
   const [isScrolled, setIsScrolled] = useState(false)
@@ -45,14 +44,88 @@ const EnhancedHeader: React.FC = () => {
         transition={{ duration: 0.6, ease: 'easeOut' }}
       >
         <div className="header-container">
-          {/* Logo */}
+          {/* Animated Logo */}
           <motion.div
             className="header-logo"
-            whileHover={{ scale: 1.05 }}
-            whileTap={{ scale: 0.95 }}
+            initial={{ x: -100, opacity: 0 }}
+            animate={{ x: 0, opacity: 1 }}
+            transition={{ duration: 0.8, ease: "easeOut" }}
           >
             <Link to="/" className="logo-link">
-              <img src={portfolioLogo} alt="Ganesh Jayakumar Portfolio Logo" className="logo-image" />
+              <motion.div
+                className="animated-logo-container"
+                animate={{ 
+                  rotate: [0, 5, -5, 0],
+                  scale: [1, 1.05, 1]
+                }}
+                transition={{ 
+                  duration: 4,
+                  repeat: Infinity,
+                  ease: "easeInOut"
+                }}
+                whileHover={{ 
+                  scale: 1.1,
+                  rotate: 10,
+                  transition: { duration: 0.3 }
+                }}
+              >
+                <div className="logo-orb">
+                  <motion.div
+                    className="logo-core"
+                    animate={{ 
+                      background: [
+                        "linear-gradient(135deg, #8B5CF6 0%, #A855F7 100%)",
+                        "linear-gradient(135deg, #F59E0B 0%, #F97316 100%)",
+                        "linear-gradient(135deg, #8B5CF6 0%, #A855F7 100%)"
+                      ]
+                    }}
+                    transition={{ 
+                      duration: 3,
+                      repeat: Infinity,
+                      ease: "easeInOut"
+                    }}
+                  >
+                    <span className="logo-initials">GJ</span>
+                  </motion.div>
+                  <motion.div
+                    className="logo-ring"
+                    animate={{ 
+                      rotate: [0, 360],
+                      scale: [1, 1.1, 1]
+                    }}
+                    transition={{ 
+                      duration: 8,
+                      repeat: Infinity,
+                      ease: "linear"
+                    }}
+                  />
+                  <motion.div
+                    className="logo-particles"
+                    animate={{ 
+                      opacity: [0, 1, 0],
+                      scale: [0.8, 1.2, 0.8]
+                    }}
+                    transition={{ 
+                      duration: 2,
+                      repeat: Infinity,
+                      ease: "easeInOut"
+                    }}
+                  >
+                    <div className="particle" />
+                    <div className="particle" />
+                    <div className="particle" />
+                  </motion.div>
+                </div>
+                <motion.div
+                  className="logo-text"
+                  initial={{ opacity: 0, y: 10 }}
+                  animate={{ opacity: 1, y: 0 }}
+                  transition={{ delay: 0.5, duration: 0.6 }}
+                >
+                  <span className="logo-name">GANESH</span>
+                  <span className="logo-title">JAYAKUMAR</span>
+                </motion.div>
+              </motion.div>
             </Link>
           </motion.div>
 
