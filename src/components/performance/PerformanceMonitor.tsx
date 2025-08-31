@@ -11,8 +11,8 @@ const PerformanceMonitor = () => {
   const [metrics, setMetrics] = useState<PerformanceMetrics | null>(null)
 
   useEffect(() => {
-    // Only run in development or when explicitly enabled
-    if (process.env.NODE_ENV !== 'development' && !process.env.REACT_APP_ENABLE_PERFORMANCE_MONITORING) {
+    // Only run in development
+    if (process.env.NODE_ENV !== 'development') {
       return
     }
 

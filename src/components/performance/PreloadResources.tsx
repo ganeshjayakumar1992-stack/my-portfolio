@@ -9,20 +9,20 @@ const PreloadResources = () => {
     fontLink.as = 'style'
     document.head.appendChild(fontLink)
 
-    // Preload critical images
-    const criticalImages = [
-      '/src/assets/PortfolioLogo.png',
-      '/src/assets/B2B.png',
-      '/src/assets/MedicalSocialMedia.png'
-    ]
+    // Preload critical images (commented out for now to avoid path issues)
+    // const criticalImages = [
+    //   '/src/assets/PortfolioLogo.png',
+    //   '/src/assets/B2B.png',
+    //   '/src/assets/MedicalSocialMedia.png'
+    // ]
 
-    criticalImages.forEach(src => {
-      const link = document.createElement('link')
-      link.rel = 'preload'
-      link.href = src
-      link.as = 'image'
-      document.head.appendChild(link)
-    })
+    // criticalImages.forEach(src => {
+    //   const link = document.createElement('link')
+    //   link.rel = 'preload'
+    //   link.href = src
+    //   link.as = 'image'
+    //   document.head.appendChild(link)
+    // })
 
     // DNS prefetch for external resources
     const dnsPrefetch = document.createElement('link')
