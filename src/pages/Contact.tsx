@@ -1,10 +1,16 @@
+import { motion } from 'framer-motion'
 import { ContactForm } from '../components/contact/ContactForm'
 import { FadeInUp } from '../components/animations'
 import { CONTACT, META } from '../constants/labels'
 
 const Contact = () => {
   return (
-    <div className="section">
+    <motion.div 
+      className="section"
+      initial={{ opacity: 0 }}
+      animate={{ opacity: 1 }}
+      transition={{ duration: 0.8 }}
+    >
       <div className="container">
         <FadeInUp>
           <div className="section-header">
@@ -94,7 +100,7 @@ const Contact = () => {
           </FadeInUp>
         </div>
       </div>
-    </div>
+    </motion.div>
   )
 }
 

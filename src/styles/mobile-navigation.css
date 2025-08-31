@@ -514,7 +514,7 @@
   border-color: var(--accent-color);
 }
 
-/* Mobile Menu Toggle */
+/* Mobile Menu Toggle - Hidden on Desktop */
 .mobile-menu-toggle {
   display: none;
   background: var(--glass-bg);
@@ -528,7 +528,6 @@
   font-size: 1.25rem;
   width: 48px;
   height: 48px;
-  display: flex;
   align-items: center;
   justify-content: center;
 }
@@ -538,6 +537,21 @@
   color: white;
   transform: scale(1.05);
   box-shadow: var(--shadow-md);
+}
+
+/* Mobile Responsive - Show mobile menu only on mobile */
+@media (max-width: 768px) {
+  .mobile-menu-toggle {
+    display: flex;
+  }
+  
+  .desktop-navigation {
+    display: none;
+  }
+  
+  .header-social {
+    display: none;
+  }
 }
 
 /* ===== PWA COMPONENTS ===== */

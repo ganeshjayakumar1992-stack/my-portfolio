@@ -17,7 +17,7 @@ const Layout = ({ children }: LayoutProps) => {
           id="main-content" 
           role="main" 
           aria-label="Main content"
-          style={{ paddingTop: '5rem' }}
+          className="main-content"
         >
           {children}
         </main>

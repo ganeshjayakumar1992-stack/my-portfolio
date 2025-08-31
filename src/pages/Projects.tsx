@@ -91,7 +91,12 @@ const Projects = () => {
   }
 
   return (
-    <div className="section">
+    <motion.div 
+      className="section"
+      initial={{ opacity: 0 }}
+      animate={{ opacity: 1 }}
+      transition={{ duration: 0.8 }}
+    >
       <div className="container">
         {/* Page Header */}
         <FadeInUp>
@@ -152,7 +157,7 @@ const Projects = () => {
           </div>
         </FadeInUp>
       </div>
-    </div>
+    </motion.div>
   )
 }
 

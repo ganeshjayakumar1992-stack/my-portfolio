@@ -105,6 +105,98 @@ const Home = () => {
               <div className="data-point" />
               <div className="data-point" />
             </motion.div>
+
+            {/* New: Floating Tech Icons */}
+            <motion.div
+              className="tech-icons"
+              animate={{ 
+                rotate: [0, 360],
+                scale: [1, 1.1, 1]
+              }}
+              transition={{ 
+                duration: 20,
+                repeat: Infinity,
+                ease: "linear"
+              }}
+            >
+              <div className="tech-icon">⚡</div>
+              <div className="tech-icon">🔬</div>
+              <div className="tech-icon">💻</div>
+            </motion.div>
+
+            {/* New: Pulsing Circles */}
+            <motion.div
+              className="pulsing-circles"
+              animate={{ 
+                scale: [1, 1.5, 1],
+                opacity: [0.3, 0.8, 0.3]
+              }}
+              transition={{ 
+                duration: 4,
+                repeat: Infinity,
+                ease: "easeInOut"
+              }}
+            >
+              <div className="pulse-circle" />
+              <div className="pulse-circle" />
+              <div className="pulse-circle" />
+            </motion.div>
+
+            {/* New: Floating Bubbles */}
+            <motion.div
+              className="floating-bubbles"
+              animate={{ 
+                y: [0, -50, 0],
+                x: [0, 20, 0]
+              }}
+              transition={{ 
+                duration: 8,
+                repeat: Infinity,
+                ease: "easeInOut",
+                delay: 1.5
+              }}
+            >
+              <div className="bubble" />
+              <div className="bubble" />
+              <div className="bubble" />
+            </motion.div>
+
+            {/* New: DNA Helix */}
+            <motion.div
+              className="dna-helix"
+              animate={{ 
+                rotateY: [0, 360],
+                scale: [1, 1.2, 1]
+              }}
+              transition={{ 
+                duration: 15,
+                repeat: Infinity,
+                ease: "linear"
+              }}
+            >
+              <div className="dna-strand" />
+              <div className="dna-strand" />
+              <div className="dna-connection" />
+            </motion.div>
+
+            {/* New: Circuit Board */}
+            <motion.div
+              className="circuit-board"
+              animate={{ 
+                opacity: [0.4, 1, 0.4],
+                scale: [1, 1.05, 1]
+              }}
+              transition={{ 
+                duration: 6,
+                repeat: Infinity,
+                ease: "easeInOut",
+                delay: 2.5
+              }}
+            >
+              <div className="circuit-line" />
+              <div className="circuit-line" />
+              <div className="circuit-node" />
+            </motion.div>
           </div>
 
           <motion.div

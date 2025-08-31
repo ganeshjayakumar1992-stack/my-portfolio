@@ -1,9 +1,17 @@
+import { motion } from 'framer-motion'
 import { FadeInUp } from '../components/animations'
 import { ABOUT, SKILLS, EXPERIENCE, ANIMATION_DELAYS } from '../constants/labels'
 
 const About = () => {
   return (
-    <div className="section" role="region" aria-label="About section">
+    <motion.div 
+      className="section" 
+      role="region" 
+      aria-label="About section"
+      initial={{ opacity: 0 }}
+      animate={{ opacity: 1 }}
+      transition={{ duration: 0.8 }}
+    >
       <div className="container">
         <FadeInUp>
           <div className="section-header">
@@ -201,7 +209,7 @@ const About = () => {
           </div>
         </section>
       </div>
-    </div>
+    </motion.div>
   )
 }
 
