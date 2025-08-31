@@ -149,7 +149,7 @@ const Home = () => {
       </section>
 
       {/* Projects Section */}
-      <section className="section" style={{ backgroundColor: 'var(--bg-secondary)' }}>
+      <section className="section projects-section-compact" style={{ backgroundColor: 'var(--bg-secondary)' }}>
         <div className="container">
           <FadeInUp>
             <div className="section-header">
@@ -160,78 +160,11 @@ const Home = () => {
             </div>
           </FadeInUp>
 
-          <div className="projects-grid">
-            <FadeInUp delay={ANIMATION_DELAYS.CARD_1}>
-              <div className="project-card glass-card">
-                <div className="project-image">E-Commerce</div>
-                <div className="project-content">
-                  <h3 className="project-title">{PROJECTS.ECOMMERCE.TITLE}</h3>
-                  <p className="project-description">
-                    {PROJECTS.ECOMMERCE.DESCRIPTION}
-                  </p>
-                  <div className="project-tags">
-                    {PROJECTS.ECOMMERCE.TAGS.map((tag) => (
-                      <span key={tag} className="project-tag">
-                        {tag}
-                      </span>
-                    ))}
-                  </div>
-                  <Link to="/projects" className="project-link">
-                    {PROJECTS.ECOMMERCE.LINK_TEXT}
-                  </Link>
-                </div>
-              </div>
-            </FadeInUp>
-
-            <FadeInUp delay={ANIMATION_DELAYS.CARD_2}>
-              <div className="project-card glass-card">
-                <div className="project-image">Task App</div>
-                <div className="project-content">
-                  <h3 className="project-title">{PROJECTS.TASK_APP.TITLE}</h3>
-                  <p className="project-description">
-                    {PROJECTS.TASK_APP.DESCRIPTION}
-                  </p>
-                  <div className="project-tags">
-                    {PROJECTS.TASK_APP.TAGS.map((tag) => (
-                      <span key={tag} className="project-tag">
-                        {tag}
-                      </span>
-                    ))}
-                  </div>
-                  <Link to="/projects" className="project-link">
-                    {PROJECTS.TASK_APP.LINK_TEXT}
-                  </Link>
-                </div>
-              </div>
-            </FadeInUp>
-
-            <FadeInUp delay={ANIMATION_DELAYS.CARD_3}>
-              <div className="project-card glass-card">
-                <div className="project-image">Portfolio</div>
-                <div className="project-content">
-                  <h3 className="project-title">{PROJECTS.PORTFOLIO.TITLE}</h3>
-                  <p className="project-description">
-                    {PROJECTS.PORTFOLIO.DESCRIPTION}
-                  </p>
-                  <div className="project-tags">
-                    {PROJECTS.PORTFOLIO.TAGS.map((tag) => (
-                      <span key={tag} className="project-tag">
-                        {tag}
-                      </span>
-                    ))}
-                  </div>
-                  <Link to="/projects" className="project-link">
-                    {PROJECTS.PORTFOLIO.LINK_TEXT}
-                  </Link>
-                </div>
-              </div>
-            </FadeInUp>
-          </div>
-
           <FadeInUp delay={0.4}>
-            <div className="text-center mt-12">
-              <Link to="/projects" className="btn-primary">
+            <div className="text-center mt-2">
+              <Link to="/projects" className="btn-primary btn-large">
                 {PROJECTS.VIEW_ALL_BUTTON}
+                <ArrowRight className="w-5 h-5 ml-2" />
               </Link>
             </div>
           </FadeInUp>

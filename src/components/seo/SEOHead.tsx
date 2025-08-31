@@ -22,20 +22,24 @@ const SEOHead: React.FC<SEOHeadProps> = ({
   url = window.location.href,
   type = 'website'
 }) => {
-  const fullTitle = `${title} | Ganesh Jayakumar - Full Stack Developer`
+  const fullTitle = `${title} | Ganesh Jayakumar - Salesforce Technical Architect & AI Enthusiast`
   
   const allKeywords = useMemo(() => {
     const defaultKeywords = [
       'Ganesh Jayakumar',
-      'Full Stack Developer',
+      'Salesforce Technical Architect',
+      'Salesforce CPQ',
+      'AI/ML Developer',
+      'Einstein AI',
+      'Medical LLM',
       'React Developer',
       'TypeScript Developer',
-      'Web Development',
+      'Full Stack Development',
       'Portfolio',
       'Software Engineer',
-      'Frontend Developer',
-      'Backend Developer',
-      'JavaScript Developer'
+      'Salesforce Consultant',
+      'AI Consultant',
+      'Environmental Technology'
     ]
     return [...new Set([...defaultKeywords, ...keywords])]
   }, [keywords])
@@ -47,7 +51,7 @@ const SEOHead: React.FC<SEOHeadProps> = ({
       { property: 'og:type', content: type },
       { property: 'og:url', content: url },
       { property: 'og:image', content: image },
-      { property: 'og:site_name', content: 'Ganesh Jayakumar Portfolio' },
+      { property: 'og:site_name', content: 'Ganesh Jayakumar - Salesforce Technical Architect' },
       { property: 'og:locale', content: 'en_US' }
     ]
     
@@ -72,24 +76,28 @@ const SEOHead: React.FC<SEOHeadProps> = ({
       "@context": "https://schema.org",
       "@type": "Person",
       "name": "Ganesh Jayakumar",
-      "jobTitle": "Full Stack Developer",
-      "description": "Experienced full stack developer specializing in React, TypeScript, and modern web technologies",
+      "jobTitle": "Salesforce Technical Architect",
+      "description": "Salesforce Technical Architect with 15+ years of IT experience, specializing in AI/ML solutions, CPQ automation, and building sustainable environmental technologies",
       "url": "https://ganeshjayakumar.dev",
       "sameAs": [
-        "https://github.com/ganeshjayakumar",
-        "https://linkedin.com/in/ganeshjayakumar"
+        "https://github.com/ganeshjayakumar1992-stack",
+        "https://linkedin.com/in/ganeshjayakumar1989/"
       ],
       "knowsAbout": [
+        "Salesforce CPQ",
+        "Einstein AI",
+        "Field Service Lightning",
+        "AI/ML Development",
+        "Medical LLM",
         "React",
         "TypeScript",
         "Node.js",
         "Full Stack Development",
-        "Web Development",
-        "Software Engineering"
+        "Environmental Technology"
       ],
       "worksFor": {
         "@type": "Organization",
-        "name": "Freelance Developer"
+        "name": "Tata Consultancy Services"
       }
     }
     
@@ -103,7 +111,7 @@ const SEOHead: React.FC<SEOHeadProps> = ({
       "@context": "https://schema.org",
       "@type": "WebSite",
       "name": "Ganesh Jayakumar Portfolio",
-      "description": "Professional portfolio showcasing web development projects and skills",
+      "description": "Professional portfolio showcasing Salesforce solutions, AI/ML innovations, and full-stack development projects",
       "url": "https://ganeshjayakumar.dev",
       "author": {
         "@type": "Person",

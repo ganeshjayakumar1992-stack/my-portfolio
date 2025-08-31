@@ -44,8 +44,8 @@ const MobileNavigation: React.FC<MobileNavigationProps> = ({ isOpen, onClose }) 
   ]
 
   const socialLinks = [
-    { url: 'https://github.com/username', icon: Github, label: 'GitHub' },
-    { url: 'https://linkedin.com/in/username', icon: Linkedin, label: 'LinkedIn' }
+    { url: 'https://github.com/ganeshjayakumar1992-stack?tab=repositories', icon: Github, label: 'GitHub' },
+    { url: 'https://www.linkedin.com/in/ganeshjayakumar1989/', icon: Linkedin, label: 'LinkedIn' }
   ]
 
   return (

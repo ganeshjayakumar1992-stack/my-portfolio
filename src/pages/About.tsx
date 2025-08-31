@@ -63,6 +63,16 @@ const About = () => {
           <div className="about-grid" role="grid" aria-label="Skills information">
             <FadeInUp delay={0.5}>
               <div className="about-card glass-card" role="gridcell">
+                <div className="card-icon" aria-hidden="true">☁️</div>
+                <h3 className="card-title">{SKILLS.SALESFORCE.TITLE}</h3>
+                <p className="card-description">
+                  {SKILLS.SALESFORCE.DESCRIPTION}
+                </p>
+              </div>
+            </FadeInUp>
+
+            <FadeInUp delay={0.6}>
+              <div className="about-card glass-card" role="gridcell">
                 <div className="card-icon" aria-hidden="true">⚛️</div>
                 <h3 className="card-title">{SKILLS.FRONTEND.TITLE}</h3>
                 <p className="card-description">
@@ -71,7 +81,7 @@ const About = () => {
               </div>
             </FadeInUp>
 
-            <FadeInUp delay={0.6}>
+            <FadeInUp delay={0.7}>
               <div className="about-card glass-card" role="gridcell">
                 <div className="card-icon" aria-hidden="true">🔧</div>
                 <h3 className="card-title">{SKILLS.BACKEND.TITLE}</h3>
@@ -81,7 +91,17 @@ const About = () => {
               </div>
             </FadeInUp>
 
-            <FadeInUp delay={0.7}>
+            <FadeInUp delay={0.8}>
+              <div className="about-card glass-card" role="gridcell">
+                <div className="card-icon" aria-hidden="true">🤖</div>
+                <h3 className="card-title">{SKILLS.AI_ML.TITLE}</h3>
+                <p className="card-description">
+                  {SKILLS.AI_ML.DESCRIPTION}
+                </p>
+              </div>
+            </FadeInUp>
+
+            <FadeInUp delay={0.9}>
               <div className="about-card glass-card" role="gridcell">
                 <div className="card-icon" aria-hidden="true">🛠️</div>
                 <h3 className="card-title">{SKILLS.TOOLS_DEVOPS.TITLE}</h3>
@@ -95,7 +115,7 @@ const About = () => {
 
         {/* Experience Section */}
         <section aria-labelledby="experience-title">
-          <FadeInUp delay={0.8}>
+          <FadeInUp delay={1.0}>
             <div className="section-header" style={{ marginTop: '5rem' }}>
               <h2 className="section-title" id="experience-title">{EXPERIENCE.SECTION_TITLE}</h2>
               <p className="section-subtitle">
@@ -105,7 +125,7 @@ const About = () => {
           </FadeInUp>
 
           <div className="about-grid" role="grid" aria-label="Experience information">
-            <FadeInUp delay={0.9}>
+            <FadeInUp delay={1.1}>
               <div className="about-card glass-card" role="gridcell">
                 <div className="card-icon" aria-hidden="true">💼</div>
                 <h3 className="card-title">{EXPERIENCE.PROFESSIONAL.TITLE}</h3>
@@ -115,7 +135,7 @@ const About = () => {
               </div>
             </FadeInUp>
 
-            <FadeInUp delay={1.0}>
+            <FadeInUp delay={1.2}>
               <div className="about-card glass-card" role="gridcell">
                 <div className="card-icon" aria-hidden="true">🎓</div>
                 <h3 className="card-title">{EXPERIENCE.LEARNING.TITLE}</h3>
@@ -125,12 +145,56 @@ const About = () => {
               </div>
             </FadeInUp>
 
-            <FadeInUp delay={1.1}>
+            <FadeInUp delay={1.3}>
               <div className="about-card glass-card" role="gridcell">
                 <div className="card-icon" aria-hidden="true">🤝</div>
                 <h3 className="card-title">{EXPERIENCE.COLLABORATION.TITLE}</h3>
                 <p className="card-description">
                   {EXPERIENCE.COLLABORATION.DESCRIPTION}
+                </p>
+              </div>
+            </FadeInUp>
+          </div>
+        </section>
+
+        {/* Future Goals Section */}
+        <section aria-labelledby="goals-title">
+          <FadeInUp delay={1.4}>
+            <div className="section-header" style={{ marginTop: '5rem' }}>
+              <h2 className="section-title" id="goals-title">Future Goals & Vision</h2>
+              <p className="section-subtitle">
+                My entrepreneurial aspirations and vision for creating sustainable environmental solutions through technology.
+              </p>
+            </div>
+          </FadeInUp>
+
+          <div className="about-grid" role="grid" aria-label="Future goals information">
+            <FadeInUp delay={1.3}>
+              <div className="about-card glass-card" role="gridcell">
+                <div className="card-icon" aria-hidden="true">🚀</div>
+                <h3 className="card-title">Entrepreneurial Journey</h3>
+                <p className="card-description">
+                  I'm actively working towards starting my own consulting company to provide Salesforce, AI/ML, and full-stack development services. Despite balancing family commitments with two kids, I remain committed to building my entrepreneurial future.
+                </p>
+              </div>
+            </FadeInUp>
+
+            <FadeInUp delay={1.4}>
+              <div className="about-card glass-card" role="gridcell">
+                <div className="card-icon" aria-hidden="true">🌱</div>
+                <h3 className="card-title">Environmental Mission</h3>
+                <p className="card-description">
+                  My long-term vision is to address the most pressing environmental challenges, particularly plastic waste management and poly solid fuel generation from plastics. I believe technology can create sustainable solutions for a better future.
+                </p>
+              </div>
+            </FadeInUp>
+
+            <FadeInUp delay={1.5}>
+              <div className="about-card glass-card" role="gridcell">
+                <div className="card-icon" aria-hidden="true">🔬</div>
+                <h3 className="card-title">AI/ML Innovation</h3>
+                <p className="card-description">
+                  Currently exploring medical chatbot LLM development for research paper summarization. I'm fine-tuning models with MedQA and MedAlpaca datasets to advance medical research and AI applications in healthcare.
                 </p>
               </div>
             </FadeInUp>

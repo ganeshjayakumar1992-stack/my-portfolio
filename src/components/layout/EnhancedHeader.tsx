@@ -3,6 +3,7 @@ import { motion, AnimatePresence } from 'framer-motion'
 import { Link, useLocation } from 'react-router-dom'
 import { Menu, X, Github, Linkedin } from 'lucide-react'
 import MobileNavigation from '../navigation/MobileNavigation'
+import portfolioLogo from '../../assets/PortfolioLogo.png'
 
 const EnhancedHeader: React.FC = () => {
   const [isScrolled, setIsScrolled] = useState(false)
@@ -27,8 +28,8 @@ const EnhancedHeader: React.FC = () => {
   ]
 
   const socialLinks = [
-    { url: 'https://github.com/username', icon: Github, label: 'GitHub' },
-    { url: 'https://linkedin.com/in/username', icon: Linkedin, label: 'LinkedIn' }
+    { url: 'https://github.com/ganeshjayakumar1992-stack?tab=repositories', icon: Github, label: 'GitHub' },
+    { url: 'https://www.linkedin.com/in/ganeshjayakumar1989/', icon: Linkedin, label: 'LinkedIn' }
   ]
 
   const toggleMobileMenu = () => {
@@ -51,8 +52,7 @@ const EnhancedHeader: React.FC = () => {
             whileTap={{ scale: 0.95 }}
           >
             <Link to="/" className="logo-link">
-              <span className="logo-text">Portfolio</span>
-              <span className="logo-dot">.</span>
+              <img src={portfolioLogo} alt="Ganesh Jayakumar Portfolio Logo" className="logo-image" />
             </Link>
           </motion.div>
 

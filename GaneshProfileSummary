@@ -1,0 +1,206 @@
+Ganesh Jayakumar 
+
+Salesforce Technical Architect | Developing Full Stack Skills with Focus on AI
+
+
+Professional Summary:
+
+With over 15 years in the IT / Services industry, and 7 years into the Salesforce ecosystem, I am passionate about leveraging my diverse experience to solve business challenges and drive innovation.
+
+My expertise covers a broad range of Salesforce applications including Sales, Service, Field Service Lightning, Revenue Cloud, CPQ, and Experience Cloud. I'm also adept in integrating Gen AI features to automate Salesforce solutions, enhancing efficiency and productivity across Sales, Service, and Revenue clouds.
+
+As an experienced Architect, I facilitate technical/functional architecture meetings and product grooming sessions. I love preparing high-level design documents and architecture diagrams, and I have a knack for creating scalable solutions.
+
+My background spans multiple industries such as Telecom, Finance, Healthcare, and Retail. This breadth of experience enables me to quickly adapt and bring industry-specific insights to my consulting engagements.
+
+I have hands-on experience with Continuous Integration and Delivery tools like Git, GitHub, Butbucket for Version Control and Copado for DevOps . My technical chops extend to Salesforce Apex Development, Lightning Web Components, Salesforce Flow Builder, App Builder, Experience Builder, and Aura Components.
+
+Integration is my forte. I have successfully integrated Salesforce with enterprise systems using REST-based web services, Platform Events, Streaming API, and MuleSoft. My expertise also includes creating custom reports and dashboards using Salesforce Report Builder and Einstein Analytics.
+
+By automating Salesforce using AI Prompt Engineering, Einstein for Developers, and Gen AI integrations, I help companies scale and increase their profits.
+
+Besides Salesforce, I'm honing my skills in open source technologies such as React.js, Node.js, Express.js, MongoDB, Java, Python and Springboot MicroServices. This has led me to exciting projects including B2B Healthcare website.
+
+
+Salesforce Technical Architect 
+Tata Consultancy Services
+Apr 2023 - Present · 2 yrs 5 mos
+Irving, Texas, United States · Remote
+
+    * 		- Working on AI-driven enhancements using Einstein AI platform and Data Cloud and integrated predictive models to improve Quote-to-Cash (QTC) automation.
+    * 		- Expertise in Salesforce CPQ Product Configuration, Bundles, Pricing, Discounts, Custom Scripts, Custom Actions, QCP (Quote Calculator Plugin), Advanced approvals and customized OOB capabilities of CPQ Managed Package.
+    * 		- Experience in working with CPQ object and understanding the CPQ data model to provide better solution in Quote to Cash lifecycle which includes Product Catalog, Pricing, Configuration, Quote Management, Order Management, Order Fulfillment, Order Delivery, Order Cancellation, Assets and Contract Management
+    * 		- Mentoring development team on User Stories Estimation, Sprint Planning, Low level Designing, providing technical solutions for the requirements, unit testing and deployment.
+    * 		- Enabling dev team to adopt to Continuous Integration and Delivery approach to make sure the project is delivered on time using Copado Devops.
+    * 		- Exploring AI-based opportunity scoring and revenue forecasting using Einstein Discovery and custom ML pipelines via Salesforce Data Cloud and Snowflake
+    * 		- Help the team to plan the development activities efficiently without any spillovers to next sprint, estimating the user stories and reporting to the client leads.
+    * 		- Created a reusable custom solution for Document Generation for Quotes. Helped clients to save cost by removing the dependency of a Managed Package – Conga Composer.
+    * 		- Worked on Localization of Salesforce Custom Objects Fields, Validation Rules, OOB Error Messages, Custom Error Messages, Flow Error/Success Messages translation.
+    * 		- Proactively involved on SIT and Regression Support, test cases execution, Business Acceptance Testing to avoid defects and fixed within the stipulated time.
+    * 
+
+
+* 		
+* ￼
+* 		InfosysInfosysFull-time · 5 yrs 1 moFull-time · 5 yrs 1 mo
+    * 		Lead ConsultantLead ConsultantMay 2022 - Mar 2023 · 11 mosMay 2022 to Mar 2023 · 11 mosUnited States · HybridUnited States · Hybrid
+            * 		• Providing Field Service Lightning architect solutions that are scalable and value addition to current business requirements 
+            * 		• Designed the solution by customizing various standard and custom objects. Installed Field Service Managed package for Salesforce Out of the Box solutions.
+            * 		• Provided solution design to integrate Salesforce Field Service Lightning data with external systems using Heroku Connect, Salesforce Connect, Streaming API, and Platform event connectors in Confluent Kafka
+            * 		• Experience in data migration from Click Software to Salesforce. We have migrated Service Territories, Zip codes, Service Resources, Accounts, Contacts, Operating Hours etc.,
+            * 		• Enhancing Salesforce Field Service Lightning system by automating Continuous Integration using Git and GitHub to manage code repository and versioning for each releases as per cadence. Preparing and learning Jenkins Continuous Delivery in order apply CI-CD to our project. 
+            * 		• Knowledge on Copado Pipelines, Environments, Deployment configurations, Promotions, Branching Strategy. Explored Devops exchange to implement CI-CD practices.
+            * 		• Proactively monitoring application health to mitigate any risks or issues in advance
+            * 		• Enhancing UI customizations using Lightning Web Components for rich user experience
+            * 		• Analyzing Salesforce limits proactively to avoid any code errors and license violations. Maintaining and administering governance
+            * 		• Make sure that all customizations and solutions to the platform cater to best practices
+            * 		• Function with stakeholders to learn business needs, goals, and pain points. Collect requirements from various teams and stakeholders within the business
+            * 		• Staying on top of every Salesforce release/App exchange to keep an eye on new features or packages and find a way to incorporate into our application.• Providing Field Service Lightning architect solutions that are scalable and value addition to current business requirements • Designed the solution by customizing various standard and custom objects. Installed Field Service Managed package for Salesforce Out of the Box solutions. • Provided solution design to integrate Salesforce Field Service Lightning data with external systems using Heroku Connect, Salesforce Connect, Streaming API, and Platform event connectors in Confluent Kafka • Experience in data migration from Click Software to Salesforce. We have migrated Service Territories, Zip codes, Service Resources, Accounts, Contacts, Operating Hours etc., • Enhancing Salesforce Field Service Lightning system by automating Continuous Integration using Git and GitHub to manage code repository and versioning for each releases as per cadence. Preparing and learning Jenkins Continuous Delivery in order apply CI-CD to our project. • Knowledge on Copado Pipelines, Environments, Deployment configurations, Promotions, Branching Strategy. Explored Devops exchange to implement CI-CD practices. • Proactively monitoring application health to mitigate any risks or issues in advance • Enhancing UI customizations using Lightning Web Components for rich user experience • Analyzing Salesforce limits proactively to avoid any code errors and license violations. Maintaining and administering governance • Make sure that all customizations and solutions to the platform cater to best practices • Function with stakeholders to learn business needs, goals, and pain points. Collect requirements from various teams and stakeholders within the business • Staying on top of every Salesforce release/App exchange to keep an eye on new features or packages and find a way to incorporate into our application.
+    * 		
+    * 		Senior ConsultantSenior ConsultantMar 2018 - Apr 2022 · 4 yrs 2 mosMar 2018 to Apr 2022 · 4 yrs 2 mosGreater Chennai Area · On-siteGreater Chennai Area · On-site
+            * 		• Implemented, and deployed the Standard/Custom objects, Page layouts, Fields, validation rules, Apex Classes, Apex Triggers, Lightning Web Components, Flows, Custom Metadata, and other configuration changes
+            * 		• Utilize Salesforce APIs to communicate with Mulesoft primarily. Mulesoft is integrating our field service application with source systems such as Siebel and Edge
+            * 		• Automated reports and dashboards for pending/failure appointments, completed appointments metrics and Optimization jobs errors using Einstein Analytics and custom apex code
+            * 		• Experience in Connected Apps to send and receive data from Salesforce to external systems such as Mulesoft, Data loader, Sandboxes, Workbench and Kafka 
+            * 		• Working on experience builder to allow partner users to access only relevant apps and tabs by restricting access using separate licenses, profiles, and permission sets
+            * 		• Preparing low level design documents to offshore dev team to enable developers to work on user stories without any issues and supporting till production deployment
+            * 		• Created various Profiles and Roles and configured the permissions based on the organizational hierarchy requirements
+            * 		• Follow Salesforce best practices, maintain or write test classes and maintain code documentation for entire custom development
+            * 		• Introduced few custom tabs, Lightning Web Components to allow users/admins to update multiple Service Resources data by adding Resource Absences, Shifts, Skills, and Relocation. 
+            * 		• Worked on Service Area Migration custom tab and screen with multiple options to move zip codes from one territory to another, Migrate technician from one Service Territory to new Organization and to different Service Territory. These requirements saved a lot of time for Technicians/Dispatcher/Provisioners/Administrators to avoid lot of reworks on migrating technicians from one region to another region/Organization/Zip code.• Implemented, and deployed the Standard/Custom objects, Page layouts, Fields, validation rules, Apex Classes, Apex Triggers, Lightning Web Components, Flows, Custom Metadata, and other configuration changes • Utilize Salesforce APIs to communicate with Mulesoft primarily. Mulesoft is integrating our field service application with source systems such as Siebel and Edge • Automated reports and dashboards for pending/failure appointments, completed appointments metrics and Optimization jobs errors using Einstein Analytics and custom apex code • Experience in Connected Apps to send and receive data from Salesforce to external systems such as Mulesoft, Data loader, Sandboxes, Workbench and Kafka • Working on experience builder to allow partner users to access only relevant apps and tabs by restricting access using separate licenses, profiles, and permission sets • Preparing low level design documents to offshore dev team to enable developers to work on user stories without any issues and supporting till production deployment • Created various Profiles and Roles and configured the permissions based on the organizational hierarchy requirements • Follow Salesforce best practices, maintain or write test classes and maintain code documentation for entire custom development • Introduced few custom tabs, Lightning Web Components to allow users/admins to update multiple Service Resources data by adding Resource Absences, Shifts, Skills, and Relocation. • Worked on Service Area Migration custom tab and screen with multiple options to move zip codes from one territory to another, Migrate technician from one Service Territory to new Organization and to different Service Territory. These requirements saved a lot of time for Technicians/Dispatcher/Provisioners/Administrators to avoid lot of reworks on migrating technicians from one region to another region/Organization/Zip code.
+    * 		
+* 		
+* 		
+* ￼
+* 		Technical LeadTechnical LeadHCL Technologies · Full-timeHCL Technologies · Full-timeDec 2016 - Mar 2018 · 1 yr 4 mosDec 2016 to Mar 2018 · 1 yr 4 mosBengaluru, Karnataka, India · On-site
+        * 		• Acted as Technical Lead in a Siebel CRM project
+        * 		• Worked on requirements gathering and client meetings to provide technical guidance to the team
+        * 		• Prepared High level design document and conducted technical walk-through sessions
+        * 		• Enabled team to work in Agile delivery model, successfully completed many releases without major delays or blockers
+        * 		• Monitored content and configuration management of the project.
+        * 		• Cross skilled into Salesforce development and administration and aligned to Salesforce Service Cloud project.
+        * 		• Used Data Loader for insert, update, and bulk import or export of data from Salesforce.com objects. Used it to read, extract and load data from comma separated values (CSV) files and map them before modifying into Salesforce.
+        * 		• Implemented Case Management module to handle customer communications through email, phone, Experience site and convert them as Case.• Acted as Technical Lead in a Siebel CRM project • Worked on requirements gathering and client meetings to provide technical guidance to the team • Prepared High level design document and conducted technical walk-through sessions • Enabled team to work in Agile delivery model, successfully completed many releases without major delays or blockers • Monitored content and configuration management of the project. • Cross skilled into Salesforce development and administration and aligned to Salesforce Service Cloud project. • Used Data Loader for insert, update, and bulk import or export of data from Salesforce.com objects. Used it to read, extract and load data from comma separated values (CSV) files and map them before modifying into Salesforce. • Implemented Case Management module to handle customer communications through email, phone, Experience site and convert them as Case.	Senior Application Development SpecialistSenior Application Development SpecialistAccenture in India · Full-timeAccenture in India · Full-timeJul 2015 - Dec 2016 · 1 yr 6 mosJul 2015 to Dec 2016 · 1 yr 6 mosBengaluru Area, India · On-siteBengaluru Area, India · On-site
+        * 		• Acted as team lead for Product teams with a focus on guiding the teams towards improving the way they work
+        * 		• Developed Siebel products and promotions for each major release and E2E scope. Workflows, scripts, and customization in existing code were well documented and coding standards followed without compromising deadlines and code quality
+        * 		• Coached team members on Agile principles and providing general guidance on the methodology
+        * 		• Been part of E2E delivery of project and made sure no major issues in production
+        * 		• Learned Agile Scrum way of working and provided necessary support to the team using a servant leadership style whenever possible, and led by example
+        * 		• Worked on Siebel configuration and scripting of development and maintenance releases of major Telecom project.
+        * 		• Strong understanding of Siebel workflows, Integration Objects, and external systems.
+        * 		• Updated Agile tracking systems to provide transparency on product and sprint backlogs• Acted as team lead for Product teams with a focus on guiding the teams towards improving the way they work • Developed Siebel products and promotions for each major release and E2E scope. Workflows, scripts, and customization in existing code were well documented and coding standards followed without compromising deadlines and code quality • Coached team members on Agile principles and providing general guidance on the methodology • Been part of E2E delivery of project and made sure no major issues in production • Learned Agile Scrum way of working and provided necessary support to the team using a servant leadership style whenever possible, and led by example • Worked on Siebel configuration and scripting of development and maintenance releases of major Telecom project. • Strong understanding of Siebel workflows, Integration Objects, and external systems. • Updated Agile tracking systems to provide transparency on product and sprint backlogs
+* 		
+* 		
+* ￼
+* 		Senior Software EngineerSenior Software EngineerExcelacom Technologies · Full-timeExcelacom Technologies · Full-timeJun 2010 - Jul 2015 · 5 yrs 2 mosJun 2010 to Jul 2015 · 5 yrs 2 mosGreater Chennai Area · On-siteGreater Chennai Area · On-site
+        * 		• Excellent Siebel development skills in implementing Siebel Declarative Configuration Alternatives, Siebel Scripting (Server & Browser), Workflow Processes, Workflow Policies, Runtime events and Business Services.
+        * 		• Extensive experience in Siebel EAI – Integration Workflows, Integration Objects, EAI Siebel Adapters, EAI Transport Adapters, EAI Dispatch Service, EAI Data Mapping Engine, EBCs & VBCs, SOAP, WSDL, DTD.
+        * 		• Configured Screens, Views and Applets to accommodate required functions
+        * 		• Created Runtime Events to invoke workflow during Applet and BC events.
+        * 		• Worked on XML Gateway BS to pass data between VBC and EAI HTTP transport/EAI MSMQ Transport
+        * 		• Created new products, attributes, classes and associated it to Service Instances
+        * 		• Product Pricing and Attributes Pricing, Discounts Association to new product and existing products
+        * 		• Have good knowledge on pricing engine and Pricing flow
+        * 		• Worked on Bundle Products and Promotions
+        * 		• Configured Pick Applet, Static and Dynamic Drilldowns in the Applets.
+
+
+
+Licenses & certifications
+
+* 		
+* ￼
+* 		Salesforce Certified Agentforce SpecialistSalesforce Certified Agentforce SpecialistSalesforceSalesforceIssued Apr 2025Issued Apr 2025
+    * 		Show credential
+* 		
+* ￼
+* 		Salesforce certified AI AssociateSalesforce certified AI AssociateSalesforceSalesforceIssued Nov 2024Issued Nov 2024
+    * 		Show credential
+* 		
+* ￼
+* 		Salesforce Certified Platform App BuilderSalesforce Certified Platform App BuilderSalesforceSalesforceIssued Jan 2024Issued Jan 2024
+    * 		Show credential
+* 		
+* ￼
+* 		Salesforce Certified Platform Developer IISalesforce Certified Platform Developer IISalesforceSalesforceIssued Dec 2022Issued Dec 2022
+    * 		Show credential
+* 		
+* ￼
+* 		Salesforce Certified Platform Developer ISalesforce Certified Platform Developer ISalesforceSalesforceIssued Jan 2021Issued Jan 2021
+    * 		Show credential
+* 		
+* ￼
+* 		Salesforce Certified Service Cloud ConsultantSalesforce Certified Service Cloud ConsultantSalesforceSalesforceIssued Oct 2020Issued Oct 2020
+    * 		Show credential
+* 		
+* ￼
+* 		Copado Certified AdministratorCopado Certified AdministratorCopadoCopadoIssued Sep 2020Issued Sep 2020
+* 		
+* 		
+* ￼
+* 		Copado Certified DeveloperCopado Certified DeveloperCopadoCopadoIssued Sep 2020Issued Sep 2020
+* 		
+* 		
+* ￼
+* 		Tableau CRM and Einstein Discovery Consultant Tableau CRM and Einstein Discovery Consultant SalesforceSalesforceIssued Jul 2020Issued Jul 2020
+    * 		Show credential
+* 		
+* ￼
+* 		Salesforce Certified Administrator (SCA)Salesforce Certified Administrator (SCA)SalesforceSalesforceIssued Jun 2020Issued Jun 2020
+    * 		Show credential
+* 		
+* ￼
+* 		Data Science with PythonData Science with PythonSimplilearnSimplilearnIssued Nov 2017Issued Nov 2017
+* 		
+* 		
+* ￼
+* 		Python Basics DeveloperPython Basics DeveloperSimplilearnSimplilearnIssued Aug 2017Issued Aug 2017
+* 		
+* 		
+* ￼
+* 		Mulesoft Certified platform architect level 1Mulesoft Certified platform architect level 1MuleSoftMuleSoftIssued Jun 2021 · Expired Jun 2023Issued Jun 2021 · Expired Jun 2023
+* 		
+* 		
+* ￼
+* 		Mulesoft Certified Developer - Level 1Mulesoft Certified Developer - Level 1MuleSoftMuleSoftIssued Feb 2021 · Expired Feb 2023Issued Feb 2021 · Expired Feb 2023
+* 		
+* 		
+* ￼
+* 		Certified SAFe 5 AgilistCertified SAFe 5 AgilistSAFe by Scaled Agile, Inc.SAFe by Scaled Agile, Inc.Issued Jun 2020 · Expired Oct 2020Issued Jun 2020 · Expired Oct 2020Credential ID 65779993-0544Credential ID 65779993-0544
+* 		
+* 		
+* ￼
+* 		Certified Scrum MasterCertified Scrum MasterScrum AllianceScrum AllianceIssued May 2017 · Expired May 2019
+
+
+
+Honors & awards
+
+* 		Insta AwardInsta AwardIssued by Infosys Ltd · Sep 2019Issued by Infosys Ltd · Sep 2019
+        * 		
+        * ￼
+        * 		
+    * 		Associated with InfosysAssociated with Infosys
+* 		Insta AwardInsta AwardIssued by Infosys Ltd · Jan 2018Issued by Infosys Ltd · Jan 2018
+        * 		
+        * ￼
+        * 		
+    * 		Associated with InfosysAssociated with Infosys
+* 		Accenture Celebrates Excellence (ACE) AwardAccenture Celebrates Excellence (ACE) AwardIssued by Accenture Services Pvt LtdIssued by Accenture Services Pvt Ltd
+        * 		
+        * ￼
+        * 		
+    * 		Associated with Accenture in IndiaAssociated with Accenture in India
+        * 		Appreciated for individual contribution towards successfully project delivery.Appreciated for individual contribution towards successfully project delivery.
+* 		
+* 		Rising Star AwardRising Star AwardIssued by Excelacom TechnologiesIssued by Excelacom Technologies
+        * 		
+        * ￼
+        * 		
+    * 		Associated with Excelacom TechnologiesAssociated with Excelacom Technologies
+        * 		Awarded for excellence in delivery and new Siebel CRM implementation project .
+* 		
+* 		
+
+
+

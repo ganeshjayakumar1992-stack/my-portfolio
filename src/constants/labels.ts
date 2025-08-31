@@ -23,9 +23,9 @@ export const NAVIGATION = {
 
 // Hero Section
 export const HERO = {
-  BADGE_TEXT: 'Available for new opportunities',
+  BADGE_TEXT: 'Available for consulting & startup collaboration',
   TITLE: "Hi, I'm Ganesh Jayakumar",
-  SUBTITLE: 'Full-stack developer passionate about creating innovative solutions and sharing knowledge through code and writing.',
+  SUBTITLE: 'Salesforce Technical Architect with 15+ years of IT experience, specializing in AI-driven healthcare solutions, medical LLM development, and innovative enterprise applications.',
   PRIMARY_BUTTON: 'View My Work',
   SECONDARY_BUTTON: 'Get In Touch'
 } as const
@@ -56,17 +56,25 @@ export const SKILLS = {
   SECTION_TITLE: 'My Skills',
   SECTION_SUBTITLE: 'Here are the technologies and tools I work with to bring ideas to life.',
   
+  SALESFORCE: {
+    TITLE: 'Salesforce & CRM',
+    DESCRIPTION: 'Salesforce Technical Architect, CPQ, Service Cloud, Field Service Lightning, Experience Cloud, Revenue Cloud, Einstein AI, Data Cloud, Apex, Lightning Web Components, Platform Events, Heroku Connect, Salesforce Connect'
+  },
   FRONTEND: {
-    TITLE: 'Frontend',
-    DESCRIPTION: 'React, TypeScript, JavaScript, HTML5, CSS3, Responsive Design, Modern CSS (Grid, Flexbox)'
+    TITLE: 'Frontend Development',
+    DESCRIPTION: 'React 19, TypeScript, JavaScript, HTML5, CSS3, Responsive Design, Modern CSS (Grid, Flexbox), Framer Motion, Progressive Web Apps (PWA)'
   },
   BACKEND: {
-    TITLE: 'Backend',
-    DESCRIPTION: 'Node.js, Express.js, REST APIs, Database Design, Authentication, Serverless Functions'
+    TITLE: 'Backend & Full-Stack',
+    DESCRIPTION: 'Node.js, Express.js, Java, Spring Boot Microservices, Python, REST APIs, Database Design, Authentication, Serverless Functions, MongoDB'
+  },
+  AI_ML: {
+    TITLE: 'AI & Machine Learning',
+    DESCRIPTION: 'LLM Development, Medical AI, MedQA Dataset, MedAlpaca, Fine-tuning, Prompt Engineering, Einstein for Developers, Predictive Analytics'
   },
   TOOLS_DEVOPS: {
-    TITLE: 'Tools & DevOps',
-    DESCRIPTION: 'Git, GitHub, Vercel, Vite, npm, VS Code, Terminal, CI/CD, Performance Optimization'
+    TITLE: 'Tools, DevOps & Agile',
+    DESCRIPTION: 'Git, GitHub, Copado, MuleSoft, CI/CD, Agile/SAFe, Scrum, Jira, Confluence, Vercel, Vite, npm, VS Code, Performance Optimization'
   }
 } as const
 
@@ -118,21 +126,21 @@ export const PROJECTS = {
 // CTA Section
 export const CTA = {
   TITLE: "Let's Work Together",
-  SUBTITLE: "I'm always interested in new opportunities and exciting projects. Let's discuss how we can collaborate and create something amazing together!",
+  SUBTITLE: "I'm available for Salesforce consulting, AI/ML projects, full-stack development, and startup collaboration opportunities. Whether you're building the next big thing or need technical expertise, let's discuss how we can create innovative solutions together!",
   BUTTON_TEXT: 'Get In Touch'
 } as const
 
 // Contact Form
 export const CONTACT = {
   SECTION_TITLE: 'Get In Touch',
-  SECTION_SUBTITLE: "I'd love to hear from you! Whether you have a project in mind, want to discuss opportunities, or just want to say hello, feel free to reach out.",
+  SECTION_SUBTITLE: "I'd love to hear from you! Whether you have a project in mind, need consulting, want to discuss startup opportunities, or just want to say hello, feel free to reach out.",
   
   FORM: {
     FIRST_NAME: 'First Name',
     LAST_NAME: 'Last Name',
     EMAIL: 'Email Address',
     PHONE: 'Phone Number (Optional)',
-    DESCRIPTION: 'Tell me about your project or what you\'d like to discuss',
+    DESCRIPTION: 'Tell me about your project, consulting needs, startup ideas, or what you\'d like to discuss',
     SUBMIT_BUTTON: 'Send Message',
     SUBMIT_LOADING: 'Sending...',
     SUBMIT_SUCCESS: 'Message sent successfully!',
@@ -159,7 +167,7 @@ export const FOOTER = {
   SOCIAL_LINKS: {
     GITHUB: 'GitHub',
     LINKEDIN: 'LinkedIn',
-    TWITTER: 'Twitter',
+  
     EMAIL: 'Email'
   }
 } as const
@@ -170,22 +178,22 @@ export const META = {
   SITE_DESCRIPTION: 'Full-stack developer passionate about creating innovative solutions and sharing knowledge through code and writing.',
   AUTHOR: 'Ganesh Jayakumar',
   CONTACT_EMAIL: 'ganeshjayakumar1992@gmail.com',
-  GITHUB_URL: 'https://github.com/ganeshjayakumar1992-stack',
-  LINKEDIN_URL: 'https://linkedin.com/in/ganeshjayakumar1992'
+  GITHUB_URL: 'https://github.com/ganeshjayakumar1992-stack?tab=repositories',
+  LINKEDIN_URL: 'https://www.linkedin.com/in/ganeshjayakumar1989/'
 } as const
 
 // Animation Delays (in seconds)
 export const ANIMATION_DELAYS = {
   HERO_BADGE: 0,
-  HERO_TITLE: 0.2,
-  HERO_SUBTITLE: 0.4,
-  HERO_BUTTONS: 0.6,
-  HERO_VISUAL: 0.8,
+  HERO_TITLE: 0,
+  HERO_SUBTITLE: 0,
+  HERO_BUTTONS: 0,
+  HERO_VISUAL: 0,
   SECTION_HEADER: 0,
-  CARD_1: 0.1,
-  CARD_2: 0.2,
-  CARD_3: 0.3,
-  CTA_SECTION: 0.4
+  CARD_1: 0,
+  CARD_2: 0,
+  CARD_3: 0,
+  CTA_SECTION: 0
 } as const
 
 // Form Configuration

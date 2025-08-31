@@ -1,5 +1,6 @@
 import { useState, useEffect } from 'react'
 import { Link, useLocation } from 'react-router-dom'
+import portfolioLogo from '../../assets/PortfolioLogo.png'
 
 const Header = () => {
   const [isMenuOpen, setIsMenuOpen] = useState(false)
@@ -34,8 +35,7 @@ const Header = () => {
         <div className="header-content">
           {/* Logo */}
           <Link to="/" className="logo">
-            <div className="logo-icon">G</div>
-            <span className="logo-text">Ganesh Jayakumar</span>
+            <img src={portfolioLogo} alt="Ganesh Jayakumar Portfolio Logo" className="logo-image" />
           </Link>
 
           {/* Desktop Navigation */}
