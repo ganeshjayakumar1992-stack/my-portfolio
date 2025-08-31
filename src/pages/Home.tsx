@@ -106,23 +106,7 @@ const Home = () => {
               <div className="data-point" />
             </motion.div>
 
-            {/* New: Floating Tech Icons */}
-            <motion.div
-              className="tech-icons"
-              animate={{ 
-                y: [0, -10, 0],
-                scale: [1, 1.1, 1]
-              }}
-              transition={{ 
-                duration: 6,
-                repeat: Infinity,
-                ease: "easeInOut"
-              }}
-            >
-              <div className="tech-icon">⚡</div>
-              <div className="tech-icon">🔬</div>
-              <div className="tech-icon">💻</div>
-            </motion.div>
+
 
             {/* New: Pulsing Circles */}
             <motion.div
