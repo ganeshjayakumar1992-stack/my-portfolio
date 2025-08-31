@@ -392,6 +392,15 @@ p {
 .main-content {
   padding-top: 80px; /* Match header height */
   min-height: calc(100vh - 80px);
+  position: relative;
+  z-index: 1;
+}
+
+/* Ensure sections are visible */
+.section {
+  position: relative;
+  z-index: 2;
+  background: var(--bg-primary);
 }
 
 /* Enhanced Hero Section - Modern Daniel Sun Inspired */

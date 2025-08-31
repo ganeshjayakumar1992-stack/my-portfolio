@@ -43,13 +43,13 @@ const Home = () => {
             <motion.div
               className="medical-cross"
               animate={{ 
-                rotate: [0, 360],
-                scale: [1, 1.2, 1]
+                scale: [1, 1.2, 1],
+                opacity: [0.7, 1, 0.7]
               }}
               transition={{ 
-                duration: 12,
+                duration: 8,
                 repeat: Infinity,
-                ease: "linear"
+                ease: "easeInOut"
               }}
             />
 
@@ -110,13 +110,13 @@ const Home = () => {
             <motion.div
               className="tech-icons"
               animate={{ 
-                rotate: [0, 360],
+                y: [0, -10, 0],
                 scale: [1, 1.1, 1]
               }}
               transition={{ 
-                duration: 20,
+                duration: 6,
                 repeat: Infinity,
-                ease: "linear"
+                ease: "easeInOut"
               }}
             >
               <div className="tech-icon">⚡</div>
@@ -165,13 +165,13 @@ const Home = () => {
             <motion.div
               className="dna-helix"
               animate={{ 
-                rotateY: [0, 360],
-                scale: [1, 1.2, 1]
+                y: [0, -15, 0],
+                scale: [1, 1.1, 1]
               }}
               transition={{ 
-                duration: 15,
+                duration: 10,
                 repeat: Infinity,
-                ease: "linear"
+                ease: "easeInOut"
               }}
             >
               <div className="dna-strand" />
