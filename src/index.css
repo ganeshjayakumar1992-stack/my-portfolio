@@ -83,6 +83,8 @@ html {
   scroll-behavior: smooth;
   /* Optimize scrolling performance */
   -webkit-overflow-scrolling: touch;
+  /* Reduce layout thrashing */
+  contain: layout style paint;
 }
 
 body {
@@ -90,6 +92,10 @@ body {
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
   text-rendering: optimizeLegibility;
+  /* Improve performance */
+  contain: layout style paint;
+  /* Optimize animations */
+  will-change: scroll-position;
 }
 
 html {
@@ -109,7 +115,7 @@ body {
   letter-spacing: -0.01em;
 }
 
-/* Animated background elements - Modern Subtle */
+/* Animated background elements - Optimized Performance */
 body::before {
   content: '';
   position: fixed;
@@ -124,6 +130,10 @@ body::before {
   pointer-events: none;
   z-index: -1;
   animation: backgroundFloat 30s ease-in-out infinite;
+  /* Performance optimizations */
+  will-change: transform, opacity;
+  transform: translateZ(0);
+  backface-visibility: hidden;
 }
 
 @keyframes backgroundFloat {
@@ -138,6 +148,129 @@ body::before {
   66% { 
     transform: translate(5px, -3px) scale(0.98);
     opacity: 0.9;
+  }
+}
+
+/* Loading States and Smooth Transitions */
+@keyframes fadeInUp {
+  from {
+    opacity: 0;
+    transform: translateY(30px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
+}
+
+@keyframes scaleIn {
+  from {
+    opacity: 0;
+    transform: scale(0.9);
+  }
+  to {
+    opacity: 1;
+    transform: scale(1);
+  }
+}
+
+/* Loading Animation */
+.loading {
+  opacity: 0;
+  animation: fadeIn 0.6s ease-out forwards;
+}
+
+.loading-up {
+  opacity: 0;
+  animation: fadeInUp 0.8s ease-out forwards;
+}
+
+.loading-scale {
+  opacity: 0;
+  animation: scaleIn 0.6s ease-out forwards;
+}
+
+/* Lazy Loading for Images */
+.lazy-image {
+  opacity: 0;
+  transition: opacity 0.3s ease-in-out;
+}
+
+.lazy-image.loaded {
+  opacity: 1;
+}
+
+/* Image optimization */
+img {
+  max-width: 100%;
+  height: auto;
+  display: block;
+}
+
+/* Optimize image loading */
+img[loading="lazy"] {
+  transition: opacity 0.3s ease-in-out;
+}
+
+/* Accessibility Improvements */
+/* Focus states for better keyboard navigation */
+.nav-link:focus,
+.btn-primary:focus,
+.cta-button:focus,
+.mobile-nav-link:focus {
+  outline: 2px solid var(--secondary-color);
+  outline-offset: 2px;
+  border-radius: 12px;
+}
+
+/* Skip to main content link for screen readers */
+.skip-link {
+  position: absolute;
+  top: -40px;
+  left: 6px;
+  background: var(--primary-color);
+  color: white;
+  padding: 8px;
+  text-decoration: none;
+  border-radius: 4px;
+  z-index: 10000;
+  transition: top 0.3s;
+}
+
+.skip-link:focus {
+  top: 6px;
+}
+
+/* High contrast mode support */
+@media (prefers-contrast: high) {
+  :root {
+    --text-primary: #000000;
+    --text-secondary: #333333;
+    --border-color: #000000;
+  }
+}
+
+/* Reduced motion support */
+@media (prefers-reduced-motion: reduce) {
+  *,
+  *::before,
+  *::after {
+    animation-duration: 0.01ms !important;
+    animation-iteration-count: 1 !important;
+    transition-duration: 0.01ms !important;
+  }
+  
+  body::before {
+    animation: none;
   }
 }
 
@@ -1117,14 +1250,18 @@ p {
   --transition-slow: 0.8s ease;
 }
 
-/* Enhanced Card Animations */
+/* Enhanced Card Animations - Optimized Performance */
 .about-card, .project-card {
-  transition: all var(--transition-medium);
+  transition: transform var(--transition-medium), box-shadow var(--transition-medium);
+  /* Performance optimizations */
+  will-change: transform;
+  transform: translateZ(0);
+  backface-visibility: hidden;
 }
 
 .about-card:hover, .project-card:hover {
-  transform: translateY(-8px);
-  box-shadow: 0 20px 40px rgba(0, 0, 0, 0.1);
+  transform: translateY(-8px) translateZ(0);
+  box-shadow: var(--shadow-2xl);
 }
 
 /* Responsive Design for Contact Form */

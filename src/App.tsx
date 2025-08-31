@@ -8,6 +8,8 @@ import Projects from './pages/Projects'
 import Blog from './pages/Blog'
 import Contact from './pages/Contact'
 import BlogPost from './pages/BlogPost'
+import PerformanceMonitor from './components/performance/PerformanceMonitor'
+import PreloadResources from './components/performance/PreloadResources'
 import './index.css'
 
 // ScrollToTop component to ensure pages start at the top
@@ -25,7 +27,12 @@ function App() {
   return (
     <Router>
       <AccessibilityProvider>
+        <PreloadResources />
         <ScrollToTop />
+        {/* Skip to main content link for accessibility */}
+        <a href="#main-content" className="skip-link">
+          Skip to main content
+        </a>
         <Layout>
           <Routes>
             <Route path="/" element={<Home />} />
@@ -36,6 +43,7 @@ function App() {
             <Route path="/contact" element={<Contact />} />
           </Routes>
         </Layout>
+        <PerformanceMonitor />
       </AccessibilityProvider>
     </Router>
   )
