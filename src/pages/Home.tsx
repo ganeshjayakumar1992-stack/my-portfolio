@@ -1,6 +1,6 @@
 import { Link } from 'react-router-dom'
 import { motion } from 'framer-motion'
-import { ArrowRight, Sparkles, Code, Zap } from 'lucide-react'
+import { ArrowRight, Sparkles } from 'lucide-react'
 import { FadeInUp } from '../components/animations'
 import { HERO, ABOUT, PROJECTS, CTA, ANIMATION_DELAYS } from '../constants/labels'
 import SEOHead from '../components/seo/SEOHead'
@@ -15,7 +15,7 @@ const Home = () => {
         type="website"
       />
       
-      {/* Hero Section */}
+      {/* Hero Section - Modern Full Screen */}
       <section className="hero">
         <div className="hero-content">
           <motion.div
@@ -61,42 +61,11 @@ const Home = () => {
             </Link>
           </motion.div>
         </div>
-        
-        <motion.div 
-          className="hero-visual"
-          initial={{ opacity: 0, x: 100 }}
-          animate={{ opacity: 1, x: 0 }}
-          transition={{ duration: 1, delay: ANIMATION_DELAYS.HERO_VISUAL }}
-        >
-          <div className="floating-elements">
-            <motion.div 
-              className="floating-element"
-              animate={{ y: [-10, 10, -10] }}
-              transition={{ duration: 3, repeat: Infinity, ease: "easeInOut" }}
-            >
-              <Code className="w-8 h-8" />
-            </motion.div>
-            <motion.div 
-              className="floating-element"
-              animate={{ y: [10, -10, 10] }}
-              transition={{ duration: 4, repeat: Infinity, ease: "easeInOut", delay: 1 }}
-            >
-              <Zap className="w-8 h-8" />
-            </motion.div>
-            <motion.div 
-              className="floating-element"
-              animate={{ y: [-10, 10, -10] }}
-              transition={{ duration: 3.5, repeat: Infinity, ease: "easeInOut", delay: 2 }}
-            >
-              <Sparkles className="w-8 h-8" />
-            </motion.div>
-          </div>
-        </motion.div>
       </section>
 
-      {/* About Section */}
+      {/* About Section - Modern Layout */}
       <section className="section">
-        <div className="container">
+        <div className="container-narrow">
           <FadeInUp>
             <div className="section-header">
               <h2 className="section-title">{ABOUT.SECTION_TITLE}</h2>
@@ -105,39 +74,41 @@ const Home = () => {
               </p>
             </div>
           </FadeInUp>
-          
-          <div className="about-grid">
-            <FadeInUp delay={ANIMATION_DELAYS.CARD_1}>
-              <div className="about-card glass-card">
-                <div className="card-icon">💻</div>
-                <h3 className="card-title">{ABOUT.WHO_I_AM.TITLE}</h3>
-                <p className="card-description">
-                  {ABOUT.WHO_I_AM.DESCRIPTION}
-                </p>
-              </div>
-            </FadeInUp>
+        </div>
+        
+        <div className="about-grid">
+          <FadeInUp delay={ANIMATION_DELAYS.CARD_1}>
+            <div className="about-card">
+              <div className="card-icon">💻</div>
+              <h3 className="card-title">{ABOUT.WHO_I_AM.TITLE}</h3>
+              <p className="card-description">
+                {ABOUT.WHO_I_AM.DESCRIPTION}
+              </p>
+            </div>
+          </FadeInUp>
 
-            <FadeInUp delay={ANIMATION_DELAYS.CARD_2}>
-              <div className="about-card glass-card">
-                <div className="card-icon">🔍</div>
-                <h3 className="card-title">{ABOUT.MISSION.TITLE}</h3>
-                <p className="card-description">
-                  {ABOUT.MISSION.DESCRIPTION}
-                </p>
-              </div>
-            </FadeInUp>
+          <FadeInUp delay={ANIMATION_DELAYS.CARD_2}>
+            <div className="about-card">
+              <div className="card-icon">🔍</div>
+              <h3 className="card-title">{ABOUT.MISSION.TITLE}</h3>
+              <p className="card-description">
+                {ABOUT.MISSION.DESCRIPTION}
+              </p>
+            </div>
+          </FadeInUp>
 
-            <FadeInUp delay={ANIMATION_DELAYS.CARD_3}>
-              <div className="about-card glass-card">
-                <div className="card-icon">📚</div>
-                <h3 className="card-title">{ABOUT.APPROACH.TITLE}</h3>
-                <p className="card-description">
-                  {ABOUT.APPROACH.DESCRIPTION}
-                </p>
-              </div>
-            </FadeInUp>
-          </div>
+          <FadeInUp delay={ANIMATION_DELAYS.CARD_3}>
+            <div className="about-card">
+              <div className="card-icon">📚</div>
+              <h3 className="card-title">{ABOUT.APPROACH.TITLE}</h3>
+              <p className="card-description">
+                {ABOUT.APPROACH.DESCRIPTION}
+              </p>
+            </div>
+          </FadeInUp>
+        </div>
 
+        <div className="container-narrow">
           <FadeInUp delay={0.4}>
             <div className="text-center mt-12">
               <Link to="/about" className="btn-primary">
@@ -148,9 +119,9 @@ const Home = () => {
         </div>
       </section>
 
-      {/* Projects Section */}
-      <section className="section projects-section-compact" style={{ backgroundColor: 'var(--bg-secondary)' }}>
-        <div className="container">
+      {/* Projects Section - Modern Compact */}
+      <section className="section-compact" style={{ backgroundColor: 'var(--bg-secondary)' }}>
+        <div className="container-narrow">
           <FadeInUp>
             <div className="section-header">
               <h2 className="section-title">{PROJECTS.SECTION_TITLE}</h2>
@@ -161,7 +132,7 @@ const Home = () => {
           </FadeInUp>
 
           <FadeInUp delay={0.4}>
-            <div className="text-center mt-2">
+            <div className="text-center mt-8">
               <Link to="/projects" className="btn-primary btn-large">
                 {PROJECTS.VIEW_ALL_BUTTON}
                 <ArrowRight className="w-5 h-5 ml-2" />
@@ -171,9 +142,9 @@ const Home = () => {
         </div>
       </section>
 
-      {/* CTA Section */}
+      {/* CTA Section - Modern */}
       <section className="cta-section">
-        <div className="container">
+        <div className="container-narrow">
           <FadeInUp delay={ANIMATION_DELAYS.CTA_SECTION}>
             <h2 className="cta-title">{CTA.TITLE}</h2>
             <p className="cta-subtitle">
