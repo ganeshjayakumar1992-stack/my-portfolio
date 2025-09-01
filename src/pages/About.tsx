@@ -1,5 +1,5 @@
 
-import { ABOUT, SKILLS, EXPERIENCE, ANIMATION_DELAYS } from '../constants/labels'
+import { ABOUT, SKILLS, EXPERIENCE } from '../constants/labels'
 
 const About = () => {
   return (

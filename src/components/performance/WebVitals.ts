@@ -1,5 +1,37 @@
 // Simplified Web Vitals implementation without external dependencies
-function sendToAnalytics(metric: any) {
+
+interface WebVitalMetric {
+  name: string
+  value: number
+  rating: 'good' | 'needs-improvement' | 'poor'
+  delta: number
+  id: string
+}
+
+interface LayoutShiftEntry extends PerformanceEntry {
+  value: number
+  hadRecentInput: boolean
+}
+
+interface FirstInputEntry extends PerformanceEntry {
+  processingStart: number
+  startTime: number
+}
+
+interface PerformanceMemory {
+  usedJSHeapSize: number
+  totalJSHeapSize: number
+  jsHeapSizeLimit: number
+}
+
+interface NetworkConnection {
+  effectiveType: string
+  downlink: number
+  rtt: number
+  saveData: boolean
+}
+
+function sendToAnalytics(metric: WebVitalMetric) {
   // In a real app, you would send this to your analytics service
   console.log('Web Vital:', {
     name: metric.name,
@@ -17,14 +49,15 @@ export function reportWebVitals() {
     let clsValue = 0
     const clsObserver = new PerformanceObserver((list) => {
       for (const entry of list.getEntries()) {
-        if (!(entry as any).hadRecentInput) {
-          clsValue += (entry as any).value
+        const layoutShiftEntry = entry as LayoutShiftEntry
+        if (!layoutShiftEntry.hadRecentInput) {
+          clsValue += layoutShiftEntry.value
           sendToAnalytics({
             name: 'CLS',
             value: clsValue,
             rating: clsValue < 0.1 ? 'good' : clsValue < 0.25 ? 'needs-improvement' : 'poor',
-            delta: (entry as any).value,
-            id: entry.id
+            delta: layoutShiftEntry.value,
+            id: entry.id || 'cls'
           })
         }
       }
@@ -36,13 +69,14 @@ export function reportWebVitals() {
   if ('PerformanceObserver' in window) {
     const fidObserver = new PerformanceObserver((list) => {
       for (const entry of list.getEntries()) {
-        const fid = (entry as any).processingStart - (entry as any).startTime
+        const firstInputEntry = entry as FirstInputEntry
+        const fid = firstInputEntry.processingStart - firstInputEntry.startTime
         sendToAnalytics({
           name: 'FID',
           value: fid,
           rating: fid < 100 ? 'good' : fid < 300 ? 'needs-improvement' : 'poor',
           delta: fid,
-          id: entry.id
+          id: entry.id || 'fid'
         })
       }
     })
@@ -59,7 +93,7 @@ export function reportWebVitals() {
             value: entry.startTime,
             rating: entry.startTime < 1000 ? 'good' : entry.startTime < 1800 ? 'needs-improvement' : 'poor',
             delta: entry.startTime,
-            id: entry.id
+            id: entry.id || 'fcp'
           })
         }
       }
@@ -78,7 +112,7 @@ export function reportWebVitals() {
           value: lastEntry.startTime,
           rating: lastEntry.startTime < 2500 ? 'good' : lastEntry.startTime < 4000 ? 'needs-improvement' : 'poor',
           delta: lastEntry.startTime,
-          id: lastEntry.id
+          id: lastEntry.id || 'lcp'
         })
       }
     })
@@ -124,7 +158,7 @@ export const measurePerformance = () => {
 // Memory usage monitoring
 export const getMemoryInfo = () => {
   if ('memory' in performance) {
-    const memory = (performance as any).memory
+    const memory = (performance as Performance & { memory: PerformanceMemory }).memory
     return {
       usedJSHeapSize: memory.usedJSHeapSize,
       totalJSHeapSize: memory.totalJSHeapSize,
@@ -137,7 +171,7 @@ export const getMemoryInfo = () => {
 // Network information
 export const getNetworkInfo = () => {
   if ('connection' in navigator) {
-    const connection = (navigator as any).connection
+    const connection = (navigator as Navigator & { connection: NetworkConnection }).connection
     return {
       effectiveType: connection.effectiveType,
       downlink: connection.downlink,

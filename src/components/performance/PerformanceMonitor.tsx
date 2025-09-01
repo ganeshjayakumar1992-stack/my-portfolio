@@ -43,7 +43,7 @@ const PerformanceMonitor = () => {
           const observer = new PerformanceObserver((list) => {
             for (const entry of list.getEntries()) {
               if (!entry.hadRecentInput) {
-                cumulativeLayoutShift += (entry as any).value
+                cumulativeLayoutShift += (entry as PerformanceEntry & { value: number }).value
               }
             }
           })
