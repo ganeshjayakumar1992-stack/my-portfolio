@@ -4,6 +4,7 @@ import medicalLLMImage from '../assets/medical-research-llm.png'
 import b2bHealthcareImage from '../assets/B2B.png'
 import aiServiceCloudImage from '../assets/ServiceCloudApp.png'
 import medicalSocialMediaImage from '../assets/MedicalSocialMedia.png'
+import SEOHead from '../components/seo/SEOHead'
 
 // Define Project interface
 interface Project {
@@ -89,63 +90,70 @@ const Projects = () => {
   }
 
   return (
-    <div 
-      className="section"
-      style={{ backgroundColor: 'white', color: '#1E293B' }}
-    >
-      <div className="container">
-        {/* Page Header */}
-        <div className="section-header text-center">
-          <h1 className="section-title" style={{ color: '#1E293B' }}>My Projects</h1>
-          <p className="section-subtitle" style={{ color: '#475569' }}>
-            Here's a showcase of my work spanning Salesforce solutions, AI/ML innovations, and full-stack development. 
-            Each project represents my commitment to leveraging technology for business value and sustainable impact.
-          </p>
-        </div>
+    <>
+      <SEOHead 
+        description="Showcase of my work in Salesforce solutions, AI/ML innovations, and full-stack development. View my portfolio of projects including medical LLM, healthcare platforms, and modern web applications."
+        keywords={['Salesforce Projects', 'AI/ML Development', 'Full Stack Projects', 'Medical LLM', 'Healthcare Technology']}
+        type="website"
+      />
+      <div 
+        className="section"
+        style={{ backgroundColor: 'white', color: '#1E293B' }}
+      >
+        <div className="container">
+          {/* Page Header */}
+          <div className="section-header text-center">
+            <h1 className="section-title" style={{ color: '#1E293B' }}>My Projects</h1>
+            <p className="section-subtitle" style={{ color: '#475569' }}>
+              Here's a showcase of my work spanning Salesforce solutions, AI/ML innovations, and full-stack development. 
+              Each project represents my commitment to leveraging technology for business value and sustainable impact.
+            </p>
+          </div>
 
-        {/* Project Statistics */}
-        <div className="project-stats">
-          <div className="stat-item">
-            <div className="stat-number">{sampleProjects.length}</div>
-            <div className="stat-label">Total Projects</div>
+          {/* Project Statistics */}
+          <div className="project-stats">
+            <div className="stat-item">
+              <div className="stat-number">{sampleProjects.length}</div>
+              <div className="stat-label">Total Projects</div>
+            </div>
+            <div className="stat-item">
+              <div className="stat-number">{sampleProjects.filter(p => p.featured).length}</div>
+              <div className="stat-label">Featured</div>
+            </div>
+            <div className="stat-item">
+              <div className="stat-number">{[...new Set(sampleProjects.map(p => p.category))].length}</div>
+              <div className="stat-label">Categories</div>
+            </div>
+            <div className="stat-item">
+              <div className="stat-number">{sampleProjects.filter(p => p.liveUrl).length}</div>
+              <div className="stat-label">Live Demos</div>
+            </div>
           </div>
-          <div className="stat-item">
-            <div className="stat-number">{sampleProjects.filter(p => p.featured).length}</div>
-            <div className="stat-label">Featured</div>
-          </div>
-          <div className="stat-item">
-            <div className="stat-number">{[...new Set(sampleProjects.map(p => p.category))].length}</div>
-            <div className="stat-label">Categories</div>
-          </div>
-          <div className="stat-item">
-            <div className="stat-number">{sampleProjects.filter(p => p.liveUrl).length}</div>
-            <div className="stat-label">Live Demos</div>
-          </div>
-        </div>
 
-        {/* Interactive Project Gallery */}
-        <ProjectGallery 
-          projects={sampleProjects}
-          onProjectClick={handleProjectClick}
-        />
+          {/* Interactive Project Gallery */}
+          <ProjectGallery 
+            projects={sampleProjects}
+            onProjectClick={handleProjectClick}
+          />
 
-        {/* Call to Action */}
-        <div className="cta-section">
-          <div className="cta-content">
-            <h3 style={{ color: '#1E293B' }}>Have a project in mind?</h3>
-            <p style={{ color: '#475569' }}>Let's work together to bring your Salesforce, AI/ML, or full-stack development ideas to life!</p>
-            <motion.button
-              className="btn-primary"
-              whileHover={{ scale: 1.05 }}
-              whileTap={{ scale: 0.95 }}
-              onClick={() => window.location.href = '/contact'}
-            >
-              Get In Touch
-            </motion.button>
+          {/* Call to Action */}
+          <div className="cta-section">
+            <div className="cta-content">
+              <h3 style={{ color: '#1E293B' }}>Have a project in mind?</h3>
+              <p style={{ color: '#475569' }}>Let's work together to bring your Salesforce, AI/ML, or full-stack development ideas to life!</p>
+              <motion.button
+                className="btn-primary"
+                whileHover={{ scale: 1.05 }}
+                whileTap={{ scale: 0.95 }}
+                onClick={() => window.location.href = '/contact'}
+              >
+                Get In Touch
+              </motion.button>
+            </div>
           </div>
         </div>
       </div>
-    </div>
+    </>
   )
 }
 

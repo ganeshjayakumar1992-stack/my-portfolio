@@ -125,8 +125,8 @@ const SEOHead: React.FC<SEOHeadProps> = ({
 
   // Update document title and meta tags
   useEffect(() => {
-    // Update document title
-    document.title = fullTitle
+    // Always set document title to 'Ganesh's Portfolio'
+    document.title = 'Ganesh\'s Portfolio'
     
     // Update meta description
     let metaDescription = document.querySelector('meta[name="description"]')
@@ -152,6 +152,39 @@ const SEOHead: React.FC<SEOHeadProps> = ({
     // Add structured data
     addStructuredData()
   }, [fullTitle, description, allKeywords, type, url, image, updateOpenGraphTags, addStructuredData])
+
+  // Additional effect to ensure title is always set correctly
+  useEffect(() => {
+    const setTitle = () => {
+      document.title = 'Ganesh\'s Portfolio'
+    }
+    
+    // Set title immediately
+    setTitle()
+    
+    // Also set it after a small delay to catch any dynamic changes
+    const timeoutId = setTimeout(setTitle, 100)
+    
+    return () => clearTimeout(timeoutId)
+  }, [])
+
+  // Ensure favicon is properly set
+  useEffect(() => {
+    const setFavicon = () => {
+      // Remove any existing favicon links
+      const existingFavicons = document.querySelectorAll('link[rel*="icon"]')
+      existingFavicons.forEach(link => link.remove())
+      
+      // Add our favicon
+      const faviconLink = document.createElement('link')
+      faviconLink.rel = 'icon'
+      faviconLink.type = 'image/svg+xml'
+      faviconLink.href = '/favicon.svg'
+      document.head.appendChild(faviconLink)
+    }
+    
+    setFavicon()
+  }, [])
 
   return null
 }
