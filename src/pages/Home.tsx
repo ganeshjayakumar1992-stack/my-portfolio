@@ -9,7 +9,6 @@ const Home = () => {
   return (
     <>
       <SEOHead 
-        title="Home"
         description="Full Stack Developer specializing in React, TypeScript, and modern web technologies. View my portfolio, projects, and get in touch for collaboration."
         keywords={['React Developer', 'TypeScript Developer', 'Full Stack Developer', 'Web Development']}
         type="website"

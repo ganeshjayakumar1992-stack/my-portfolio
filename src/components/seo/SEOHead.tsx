@@ -1,7 +1,6 @@
 import React, { useEffect, useCallback, useMemo } from 'react'
 
 interface SEOHeadProps {
-  title: string
   description: string
   keywords?: string[]
   image?: string
@@ -15,14 +14,13 @@ interface SEOHeadProps {
 }
 
 const SEOHead: React.FC<SEOHeadProps> = ({
-  title,
   description,
   keywords = [],
   image = '/og-image.jpg',
   url = window.location.href,
   type = 'website'
 }) => {
-  const fullTitle = title === 'Home' ? 'Ganesh\'s Portfolio' : `${title} | Ganesh's Portfolio`
+  const fullTitle = 'Ganesh\'s Portfolio' // Hardcoded as title is removed from props
   
   const allKeywords = useMemo(() => {
     const defaultKeywords = [
