@@ -57,7 +57,7 @@ export function reportWebVitals() {
             value: clsValue,
             rating: clsValue < 0.1 ? 'good' : clsValue < 0.25 ? 'needs-improvement' : 'poor',
             delta: layoutShiftEntry.value,
-            id: entry.id || 'cls'
+            id: (entry as PerformanceEntry & { id?: string }).id || 'cls'
           })
         }
       }
@@ -76,7 +76,7 @@ export function reportWebVitals() {
           value: fid,
           rating: fid < 100 ? 'good' : fid < 300 ? 'needs-improvement' : 'poor',
           delta: fid,
-          id: entry.id || 'fid'
+          id: (entry as PerformanceEntry & { id?: string }).id || 'fid'
         })
       }
     })
@@ -93,7 +93,7 @@ export function reportWebVitals() {
             value: entry.startTime,
             rating: entry.startTime < 1000 ? 'good' : entry.startTime < 1800 ? 'needs-improvement' : 'poor',
             delta: entry.startTime,
-            id: entry.id || 'fcp'
+            id: (entry as PerformanceEntry & { id?: string }).id || 'fcp'
           })
         }
       }
@@ -112,7 +112,7 @@ export function reportWebVitals() {
           value: lastEntry.startTime,
           rating: lastEntry.startTime < 2500 ? 'good' : lastEntry.startTime < 4000 ? 'needs-improvement' : 'poor',
           delta: lastEntry.startTime,
-          id: lastEntry.id || 'lcp'
+          id: (lastEntry as PerformanceEntry & { id?: string }).id || 'lcp'
         })
       }
     })
@@ -138,7 +138,7 @@ export function reportWebVitals() {
 // Performance monitoring utilities
 export const measurePerformance = () => {
   if ('performance' in window) {
-    const navigation = performance.getEntriesByType('navigation')[0] as PerformanceNavigationTiming
+    const navigation = performance.getEntriesByType('navigation')[0] as PerformanceNavigationTiming & { navigationStart: number }
     
     return {
       // Time to First Byte
