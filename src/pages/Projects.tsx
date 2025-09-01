@@ -1,5 +1,4 @@
 import { motion } from 'framer-motion'
-import { FadeInUp } from '../components/animations'
 import { ProjectGallery } from '../components/portfolio'
 import medicalLLMImage from '../assets/medical-research-llm.png'
 import b2bHealthcareImage from '../assets/B2B.png'
@@ -85,79 +84,68 @@ const sampleProjects: Project[] = [
 ]
 
 const Projects = () => {
-  const handleProjectClick = (project: Project) => {
+  const handleProjectClick = () => {
     // You could open a modal, navigate to a detail page, or perform other actions
-    console.log('Project clicked:', project)
   }
 
   return (
-    <motion.div 
+    <div 
       className="section"
-      initial={{ opacity: 0 }}
-      animate={{ opacity: 1 }}
-      transition={{ duration: 0.8 }}
+      style={{ backgroundColor: 'white', color: '#1E293B' }}
     >
       <div className="container">
         {/* Page Header */}
-        <FadeInUp>
-          <div className="section-header text-center">
-            <h1 className="section-title">My Projects</h1>
-            <p className="section-subtitle">
-              Here's a showcase of my work spanning Salesforce solutions, AI/ML innovations, and full-stack development. 
-              Each project represents my commitment to leveraging technology for business value and sustainable impact.
-            </p>
-          </div>
-        </FadeInUp>
+        <div className="section-header text-center">
+          <h1 className="section-title" style={{ color: '#1E293B' }}>My Projects</h1>
+          <p className="section-subtitle" style={{ color: '#475569' }}>
+            Here's a showcase of my work spanning Salesforce solutions, AI/ML innovations, and full-stack development. 
+            Each project represents my commitment to leveraging technology for business value and sustainable impact.
+          </p>
+        </div>
 
         {/* Project Statistics */}
-        <FadeInUp delay={0.2}>
-          <div className="project-stats">
-            <div className="stat-item">
-              <div className="stat-number">{sampleProjects.length}</div>
-              <div className="stat-label">Total Projects</div>
-            </div>
-            <div className="stat-item">
-              <div className="stat-number">{sampleProjects.filter(p => p.featured).length}</div>
-              <div className="stat-label">Featured</div>
-            </div>
-            <div className="stat-item">
-              <div className="stat-number">{[...new Set(sampleProjects.map(p => p.category))].length}</div>
-              <div className="stat-label">Categories</div>
-            </div>
-            <div className="stat-item">
-              <div className="stat-number">{sampleProjects.filter(p => p.liveUrl).length}</div>
-              <div className="stat-label">Live Demos</div>
-            </div>
+        <div className="project-stats">
+          <div className="stat-item">
+            <div className="stat-number">{sampleProjects.length}</div>
+            <div className="stat-label">Total Projects</div>
           </div>
-        </FadeInUp>
+          <div className="stat-item">
+            <div className="stat-number">{sampleProjects.filter(p => p.featured).length}</div>
+            <div className="stat-label">Featured</div>
+          </div>
+          <div className="stat-item">
+            <div className="stat-number">{[...new Set(sampleProjects.map(p => p.category))].length}</div>
+            <div className="stat-label">Categories</div>
+          </div>
+          <div className="stat-item">
+            <div className="stat-number">{sampleProjects.filter(p => p.liveUrl).length}</div>
+            <div className="stat-label">Live Demos</div>
+          </div>
+        </div>
 
         {/* Interactive Project Gallery */}
-        <FadeInUp delay={0.4}>
-          <ProjectGallery 
-            projects={sampleProjects}
-            onProjectClick={handleProjectClick}
-          />
-        </FadeInUp>
+        <ProjectGallery 
+          projects={sampleProjects}
+          onProjectClick={handleProjectClick}
+        />
 
         {/* Call to Action */}
-        <FadeInUp delay={0.6}>
-          <div className="cta-section">
-            <div className="cta-content">
-              <h3>Have a project in mind?</h3>
-              <p>Let's work together to bring your Salesforce, AI/ML, or full-stack development ideas to life!</p>
-              <motion.button
-                className="btn-primary"
-                whileHover={{ scale: 1.05 }}
-                whileTap={{ scale: 0.95 }}
-                onClick={() => window.location.href = '/contact'}
-              >
-                Get In Touch
-              </motion.button>
-            </div>
+        <div className="cta-section">
+          <div className="cta-content">
+            <h3 style={{ color: '#1E293B' }}>Have a project in mind?</h3>
+            <p style={{ color: '#475569' }}>Let's work together to bring your Salesforce, AI/ML, or full-stack development ideas to life!</p>
+            <motion.button
+              className="btn-primary"
+              whileHover={{ scale: 1.05 }}
+              whileTap={{ scale: 0.95 }}
+              onClick={() => window.location.href = '/contact'}
+            >
+              Get In Touch
+            </motion.button>
           </div>
-        </FadeInUp>
+        </div>
       </div>
-    </motion.div>
+    </div>
   )
 }
 

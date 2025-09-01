@@ -22,7 +22,7 @@ const SEOHead: React.FC<SEOHeadProps> = ({
   url = window.location.href,
   type = 'website'
 }) => {
-  const fullTitle = `${title} | Ganesh Jayakumar - Salesforce Technical Architect & AI Enthusiast`
+  const fullTitle = title === 'Home' ? 'Ganesh\'s Portfolio' : `${title} | Ganesh's Portfolio`
   
   const allKeywords = useMemo(() => {
     const defaultKeywords = [
@@ -51,7 +51,7 @@ const SEOHead: React.FC<SEOHeadProps> = ({
       { property: 'og:type', content: type },
       { property: 'og:url', content: url },
       { property: 'og:image', content: image },
-      { property: 'og:site_name', content: 'Ganesh Jayakumar - Salesforce Technical Architect' },
+      { property: 'og:site_name', content: 'Ganesh\'s Portfolio' },
       { property: 'og:locale', content: 'en_US' }
     ]
     
@@ -78,7 +78,7 @@ const SEOHead: React.FC<SEOHeadProps> = ({
       "name": "Ganesh Jayakumar",
       "jobTitle": "Salesforce Technical Architect",
       "description": "Salesforce Technical Architect with 15+ years of IT experience, specializing in AI/ML solutions, CPQ automation, and building sustainable environmental technologies",
-      "url": "https://ganeshjayakumar.dev",
+      "url": "https://ganeshjayakumar.com",
       "sameAs": [
         "https://github.com/ganeshjayakumar1992-stack",
         "https://linkedin.com/in/ganeshjayakumar1989/"
@@ -110,9 +110,9 @@ const SEOHead: React.FC<SEOHeadProps> = ({
     const websiteSchema = {
       "@context": "https://schema.org",
       "@type": "WebSite",
-      "name": "Ganesh Jayakumar Portfolio",
+      "name": "Ganesh's Portfolio",
       "description": "Professional portfolio showcasing Salesforce solutions, AI/ML innovations, and full-stack development projects",
-      "url": "https://ganeshjayakumar.dev",
+      "url": "https://ganeshjayakumar.com",
       "author": {
         "@type": "Person",
         "name": "Ganesh Jayakumar"

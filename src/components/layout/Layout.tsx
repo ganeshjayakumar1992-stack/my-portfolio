@@ -1,7 +1,6 @@
 import type { ReactNode } from 'react'
 import EnhancedHeader from './EnhancedHeader'
 import Footer from './Footer'
-import InstallPrompt from '../pwa/InstallPrompt'
 import AccessibilityProvider from '../accessibility/AccessibilityProvider'
 
 interface LayoutProps {
@@ -22,7 +21,6 @@ const Layout = ({ children }: LayoutProps) => {
           {children}
         </main>
         <Footer />
-        <InstallPrompt />
       </div>
     </AccessibilityProvider>
   )

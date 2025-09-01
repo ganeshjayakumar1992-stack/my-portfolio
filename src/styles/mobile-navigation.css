@@ -556,123 +556,7 @@
 
 /* ===== PWA COMPONENTS ===== */
 
-/* Install Prompt */
-.install-prompt {
-  position: fixed;
-  bottom: 2rem;
-  left: 50%;
-  transform: translateX(-50%);
-  z-index: 1001;
-  max-width: 400px;
-  width: calc(100% - 2rem);
-}
 
-.install-prompt-content {
-  background: var(--glass-bg);
-  backdrop-filter: blur(20px);
-  border: 1px solid var(--glass-border);
-  border-radius: 20px;
-  padding: 1.5rem;
-  box-shadow: var(--glass-shadow);
-}
-
-.install-header {
-  display: flex;
-  align-items: center;
-  gap: 1rem;
-  margin-bottom: 1rem;
-}
-
-.install-icon {
-  width: 48px;
-  height: 48px;
-  background: var(--primary-color);
-  color: white;
-  border-radius: 12px;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-}
-
-.install-text h4 {
-  font-size: 1.1rem;
-  font-weight: 600;
-  color: var(--text-primary);
-  margin: 0 0 0.25rem 0;
-}
-
-.install-text p {
-  font-size: 0.9rem;
-  color: var(--text-secondary);
-  margin: 0;
-}
-
-.install-benefits {
-  margin-bottom: 1.5rem;
-}
-
-.benefit-item {
-  display: flex;
-  align-items: center;
-  gap: 0.75rem;
-  margin-bottom: 0.5rem;
-  font-size: 0.9rem;
-  color: var(--text-secondary);
-}
-
-.benefit-item:last-child {
-  margin-bottom: 0;
-}
-
-.benefit-item svg {
-  color: var(--primary-color);
-}
-
-.install-actions {
-  display: flex;
-  gap: 0.75rem;
-  align-items: center;
-}
-
-.install-button {
-  flex: 1;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  gap: 0.5rem;
-  padding: 0.75rem 1.5rem;
-  background: var(--primary-color);
-  color: white;
-  border: none;
-  border-radius: 12px;
-  font-weight: 600;
-  cursor: pointer;
-  transition: all var(--transition-medium);
-}
-
-.install-button:hover:not(:disabled) {
-  background: var(--primary-dark);
-}
-
-.install-button:disabled {
-  opacity: 0.6;
-  cursor: not-allowed;
-}
-
-.dismiss-button {
-  background: none;
-  border: 1px solid var(--glass-border);
-  color: var(--text-secondary);
-  padding: 0.75rem;
-  border-radius: 12px;
-  cursor: pointer;
-  transition: all var(--transition-medium);
-}
-
-.dismiss-button:hover {
-  background: rgba(0, 0, 0, 0.05);
-  color: var(--text-primary);
-}
 
 /* Offline Indicator */
 .offline-indicator,
@@ -764,7 +648,6 @@
 /* Optimize animations and transitions */
 .mobile-navigation,
 .enhanced-header,
-.install-prompt,
 .offline-indicator {
   /* Hardware acceleration */
   transform: translateZ(0);
@@ -799,14 +682,7 @@
     max-width: 100%;
   }
 
-  .install-prompt {
-    bottom: 1rem;
-    left: 1rem;
-    right: 1rem;
-    transform: none;
-    max-width: none;
-    width: auto;
-  }
+
 
   .offline-indicator,
   .online-indicator {
@@ -846,17 +722,5 @@
     padding: 0.75rem 1rem;
   }
 
-  .install-prompt-content {
-    padding: 1rem;
-  }
 
-  .install-header {
-    flex-direction: column;
-    text-align: center;
-    gap: 0.75rem;
-  }
-
-  .install-actions {
-    flex-direction: column;
-  }
 }

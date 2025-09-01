@@ -54,10 +54,9 @@ export const InteractiveProjectCard: React.FC<InteractiveProjectCardProps> = ({
   return (
     <motion.div
       className="interactive-project-card"
-      initial={{ opacity: 0, y: 60 }}
-      whileInView={{ opacity: 1, y: 0 }}
-      viewport={{ once: true, margin: "-50px" }}
-      transition={{ duration: 0.6, delay: index * 0.1 }}
+      initial={{ opacity: 0, y: 20 }}
+      animate={{ opacity: 1, y: 0 }}
+      transition={{ duration: 0.4, delay: index * 0.1 }}
       onHoverStart={() => setIsHovered(true)}
       onHoverEnd={() => setIsHovered(false)}
       onClick={handleCardClick}

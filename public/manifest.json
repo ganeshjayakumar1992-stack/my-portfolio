@@ -1,7 +1,7 @@
 {
-  "name": "Portfolio - Professional Developer Portfolio",
-  "short_name": "Portfolio",
-  "description": "A modern, responsive portfolio showcasing web development projects and skills",
+  "name": "Ganesh's Portfolio - Professional Developer",
+  "short_name": "Ganesh's Portfolio",
+  "description": "Ganesh Jayakumar - Professional Developer Portfolio. Full Stack Developer specializing in React, TypeScript, Salesforce, and modern web technologies.",
   "start_url": "/",
   "display": "standalone",
   "background_color": "#ffffff",
