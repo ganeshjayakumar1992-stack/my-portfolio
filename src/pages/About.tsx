@@ -1,175 +1,230 @@
 
 import { ABOUT, SKILLS, EXPERIENCE } from '../constants/labels'
+import { motion } from 'framer-motion'
 
 const About = () => {
   return (
-    <div 
+    <motion.div 
       className="section" 
       role="region" 
       aria-label="About section"
+      initial={{ opacity: 0 }}
+      animate={{ opacity: 1 }}
+      transition={{ duration: 0.8 }}
+      style={{ backgroundColor: 'white', color: '#1E293B' }}
     >
       <div className="container">
-        <div className="section-header">
-          <h1 className="section-title" id="about-title">{ABOUT.SECTION_TITLE}</h1>
-          <p className="section-subtitle">
+        <motion.div 
+          className="section-header"
+          initial={{ opacity: 0, y: 20 }}
+          animate={{ opacity: 1, y: 0 }}
+          transition={{ duration: 0.4, delay: 0.1 }}
+        >
+          <h1 className="section-title" id="about-title" style={{ color: '#1E293B' }}>{ABOUT.SECTION_TITLE}</h1>
+          <p className="section-subtitle" style={{ color: '#475569' }}>
             Get to know me better - my background, skills, and what drives me as a developer.
           </p>
-        </div>
+        </motion.div>
 
         {/* Who I Am */}
-        <section aria-labelledby="about-title">
+        <motion.section 
+          aria-labelledby="about-title"
+          initial={{ opacity: 0, y: 20 }}
+          animate={{ opacity: 1, y: 0 }}
+          transition={{ duration: 0.4, delay: 0.2 }}
+        >
           <div className="about-grid" role="grid" aria-label="About information">
-            <div className="about-card glass-card" role="gridcell">
+            <motion.div 
+              className="about-card glass-card" 
+              role="gridcell"
+              initial={{ opacity: 0, y: 20 }}
+              animate={{ opacity: 1, y: 0 }}
+              transition={{ duration: 0.4, delay: 0.3 }}
+            >
               <div className="card-icon" aria-hidden="true">👨‍💻</div>
               <h3 className="card-title">{ABOUT.WHO_I_AM.TITLE}</h3>
               <p className="card-description">
                 {ABOUT.WHO_I_AM.DESCRIPTION}
               </p>
-            </div>
+            </motion.div>
 
-            <div className="about-card glass-card" role="gridcell">
+            <motion.div 
+              className="about-card glass-card" 
+              role="gridcell"
+              initial={{ opacity: 0, y: 20 }}
+              animate={{ opacity: 1, y: 0 }}
+              transition={{ duration: 0.4, delay: 0.4 }}
+            >
               <div className="card-icon" aria-hidden="true">🚀</div>
               <h3 className="card-title">{ABOUT.MISSION.TITLE}</h3>
               <p className="card-description">
                 {ABOUT.MISSION.DESCRIPTION}
               </p>
-            </div>
+            </motion.div>
 
-            <div className="about-card glass-card" role="gridcell">
+            <motion.div 
+              className="about-card glass-card" 
+              role="gridcell"
+              initial={{ opacity: 0, y: 20 }}
+              animate={{ opacity: 1, y: 0 }}
+              transition={{ duration: 0.4, delay: 0.5 }}
+            >
               <div className="card-icon" aria-hidden="true">🎯</div>
               <h3 className="card-title">{ABOUT.APPROACH.TITLE}</h3>
               <p className="card-description">
                 {ABOUT.APPROACH.DESCRIPTION}
               </p>
-            </div>
+            </motion.div>
           </div>
-        </section>
+        </motion.section>
 
         {/* Skills Section */}
-        <section aria-labelledby="skills-title">
-          <div className="section-header" style={{ marginTop: '5rem' }}>
-            <h2 className="section-title" id="skills-title">{SKILLS.SECTION_TITLE}</h2>
-            <p className="section-subtitle">
+        <motion.section 
+          aria-labelledby="skills-title"
+          initial={{ opacity: 0, y: 20 }}
+          animate={{ opacity: 1, y: 0 }}
+          transition={{ duration: 0.4, delay: 0.6 }}
+        >
+          <motion.div 
+            className="section-header" 
+            style={{ marginTop: '5rem' }}
+            initial={{ opacity: 0, y: 20 }}
+            animate={{ opacity: 1, y: 0 }}
+            transition={{ duration: 0.4, delay: 0.7 }}
+          >
+            <h2 className="section-title" id="skills-title" style={{ color: '#1E293B' }}>{SKILLS.SECTION_TITLE}</h2>
+            <p className="section-subtitle" style={{ color: '#475569' }}>
               {SKILLS.SECTION_SUBTITLE}
             </p>
-          </div>
+          </motion.div>
 
           <div className="about-grid" role="grid" aria-label="Skills information">
-            <div className="about-card glass-card" role="gridcell">
-              <div className="card-icon" aria-hidden="true">☁️</div>
-              <h3 className="card-title">{SKILLS.SALESFORCE.TITLE}</h3>
-              <p className="card-description">
-                {SKILLS.SALESFORCE.DESCRIPTION}
-              </p>
-            </div>
-
-            <div className="about-card glass-card" role="gridcell">
-              <div className="card-icon" aria-hidden="true">⚛️</div>
-              <h3 className="card-title">{SKILLS.FRONTEND.TITLE}</h3>
-              <p className="card-description">
-                {SKILLS.FRONTEND.DESCRIPTION}
-              </p>
-            </div>
-
-            <div className="about-card glass-card" role="gridcell">
-              <div className="card-icon" aria-hidden="true">🔧</div>
-              <h3 className="card-title">{SKILLS.BACKEND.TITLE}</h3>
-              <p className="card-description">
-                {SKILLS.BACKEND.DESCRIPTION}
-              </p>
-            </div>
-
-            <div className="about-card glass-card" role="gridcell">
-              <div className="card-icon" aria-hidden="true">🤖</div>
-              <h3 className="card-title">{SKILLS.AI_ML.TITLE}</h3>
-              <p className="card-description">
-                {SKILLS.AI_ML.DESCRIPTION}
-              </p>
-            </div>
-
-            <div className="about-card glass-card" role="gridcell">
-              <div className="card-icon" aria-hidden="true">🛠️</div>
-              <h3 className="card-title">{SKILLS.TOOLS_DEVOPS.TITLE}</h3>
-              <p className="card-description">
-                {SKILLS.TOOLS_DEVOPS.DESCRIPTION}
-              </p>
-            </div>
+            {[
+              { icon: '☁️', title: SKILLS.SALESFORCE.TITLE, description: SKILLS.SALESFORCE.DESCRIPTION },
+              { icon: '⚛️', title: SKILLS.FRONTEND.TITLE, description: SKILLS.FRONTEND.DESCRIPTION },
+              { icon: '🔧', title: SKILLS.BACKEND.TITLE, description: SKILLS.BACKEND.DESCRIPTION },
+              { icon: '🤖', title: SKILLS.AI_ML.TITLE, description: SKILLS.AI_ML.DESCRIPTION },
+              { icon: '🛠️', title: SKILLS.TOOLS_DEVOPS.TITLE, description: SKILLS.TOOLS_DEVOPS.DESCRIPTION }
+            ].map((skill, index) => (
+              <motion.div 
+                key={skill.title}
+                className="about-card glass-card" 
+                role="gridcell"
+                initial={{ opacity: 0, y: 20 }}
+                animate={{ opacity: 1, y: 0 }}
+                transition={{ duration: 0.4, delay: 0.8 + index * 0.1 }}
+              >
+                <div className="card-icon" aria-hidden="true">{skill.icon}</div>
+                <h3 className="card-title">{skill.title}</h3>
+                <p className="card-description">
+                  {skill.description}
+                </p>
+              </motion.div>
+            ))}
           </div>
-        </section>
+        </motion.section>
 
         {/* Experience Section */}
-        <section aria-labelledby="experience-title">
-          <div className="section-header" style={{ marginTop: '5rem' }}>
-            <h2 className="section-title" id="experience-title">{EXPERIENCE.SECTION_TITLE}</h2>
-            <p className="section-subtitle">
+        <motion.section 
+          aria-labelledby="experience-title"
+          initial={{ opacity: 0, y: 20 }}
+          animate={{ opacity: 1, y: 0 }}
+          transition={{ duration: 0.4, delay: 1.2 }}
+        >
+          <motion.div 
+            className="section-header" 
+            style={{ marginTop: '5rem' }}
+            initial={{ opacity: 0, y: 20 }}
+            animate={{ opacity: 1, y: 0 }}
+            transition={{ duration: 0.4, delay: 1.3 }}
+          >
+            <h2 className="section-title" id="experience-title" style={{ color: '#1E293B' }}>{EXPERIENCE.SECTION_TITLE}</h2>
+            <p className="section-subtitle" style={{ color: '#475569' }}>
               {EXPERIENCE.SECTION_SUBTITLE}
             </p>
-          </div>
+          </motion.div>
 
           <div className="about-grid" role="grid" aria-label="Experience information">
-            <div className="about-card glass-card" role="gridcell">
-              <div className="card-icon" aria-hidden="true">💼</div>
-              <h3 className="card-title">{EXPERIENCE.PROFESSIONAL.TITLE}</h3>
-              <p className="card-description">
-                {EXPERIENCE.PROFESSIONAL.DESCRIPTION}
-              </p>
-            </div>
-
-            <div className="about-card glass-card" role="gridcell">
-              <div className="card-icon" aria-hidden="true">🎓</div>
-              <h3 className="card-title">{EXPERIENCE.LEARNING.TITLE}</h3>
-              <p className="card-description">
-                {EXPERIENCE.LEARNING.DESCRIPTION}
-              </p>
-            </div>
-
-            <div className="about-card glass-card" role="gridcell">
-              <div className="card-icon" aria-hidden="true">🤝</div>
-              <h3 className="card-title">{EXPERIENCE.COLLABORATION.TITLE}</h3>
-              <p className="card-description">
-                {EXPERIENCE.COLLABORATION.DESCRIPTION}
-              </p>
-            </div>
+            {[
+              { icon: '💼', title: EXPERIENCE.PROFESSIONAL.TITLE, description: EXPERIENCE.PROFESSIONAL.DESCRIPTION },
+              { icon: '🎓', title: EXPERIENCE.LEARNING.TITLE, description: EXPERIENCE.LEARNING.DESCRIPTION },
+              { icon: '🤝', title: EXPERIENCE.COLLABORATION.TITLE, description: EXPERIENCE.COLLABORATION.DESCRIPTION }
+            ].map((exp, index) => (
+              <motion.div 
+                key={exp.title}
+                className="about-card glass-card" 
+                role="gridcell"
+                initial={{ opacity: 0, y: 20 }}
+                animate={{ opacity: 1, y: 0 }}
+                transition={{ duration: 0.4, delay: 1.4 + index * 0.1 }}
+              >
+                <div className="card-icon" aria-hidden="true">{exp.icon}</div>
+                <h3 className="card-title">{exp.title}</h3>
+                <p className="card-description">
+                  {exp.description}
+                </p>
+              </motion.div>
+            ))}
           </div>
-        </section>
+        </motion.section>
 
         {/* Future Goals Section */}
-        <section aria-labelledby="goals-title">
-          <div className="section-header" style={{ marginTop: '5rem' }}>
-            <h2 className="section-title" id="goals-title">Future Goals & Vision</h2>
-            <p className="section-subtitle">
+        <motion.section 
+          aria-labelledby="goals-title"
+          initial={{ opacity: 0, y: 20 }}
+          animate={{ opacity: 1, y: 0 }}
+          transition={{ duration: 0.4, delay: 1.6 }}
+        >
+          <motion.div 
+            className="section-header" 
+            style={{ marginTop: '5rem' }}
+            initial={{ opacity: 0, y: 20 }}
+            animate={{ opacity: 1, y: 0 }}
+            transition={{ duration: 0.4, delay: 1.7 }}
+          >
+            <h2 className="section-title" id="goals-title" style={{ color: '#1E293B' }}>Future Goals & Vision</h2>
+            <p className="section-subtitle" style={{ color: '#475569' }}>
               My entrepreneurial aspirations and vision for creating sustainable environmental solutions through technology.
             </p>
-          </div>
+          </motion.div>
 
           <div className="about-grid" role="grid" aria-label="Future goals information">
-            <div className="about-card glass-card" role="gridcell">
-              <div className="card-icon" aria-hidden="true">🚀</div>
-              <h3 className="card-title">Entrepreneurial Journey</h3>
-              <p className="card-description">
-                I'm actively working towards starting my own consulting company to provide Salesforce, AI/ML, and full-stack development services. Despite balancing family commitments with two kids, I remain committed to building my entrepreneurial future.
-              </p>
-            </div>
-
-            <div className="about-card glass-card" role="gridcell">
-              <div className="card-icon" aria-hidden="true">🌱</div>
-              <h3 className="card-title">Environmental Mission</h3>
-              <p className="card-description">
-                My long-term vision is to address the most pressing environmental challenges, particularly plastic waste management and poly solid fuel generation from plastics. I believe technology can create sustainable solutions for a better future.
-              </p>
-            </div>
-
-            <div className="about-card glass-card" role="gridcell">
-              <div className="card-icon" aria-hidden="true">🔬</div>
-              <h3 className="card-title">AI/ML Innovation</h3>
-              <p className="card-description">
-                Currently exploring medical chatbot LLM development for research paper summarization. I'm fine-tuning models with MedQA and MedAlpaca datasets to advance medical research and AI applications in healthcare.
-              </p>
-            </div>
+            {[
+              {
+                icon: '🚀',
+                title: 'Entrepreneurial Journey',
+                description: 'I\'m actively working towards starting my own consulting company to provide Salesforce, AI/ML, and full-stack development services. Despite balancing family commitments with two kids, I remain committed to building my entrepreneurial future.'
+              },
+              {
+                icon: '🌱',
+                title: 'Environmental Mission',
+                description: 'My long-term vision is to address the most pressing environmental challenges, particularly plastic waste management and poly solid fuel generation from plastics. I believe technology can create sustainable solutions for a better future.'
+              },
+              {
+                icon: '🔬',
+                title: 'AI/ML Innovation',
+                description: 'Currently exploring medical chatbot LLM development for research paper summarization. I\'m fine-tuning models with MedQA and MedAlpaca datasets to advance medical research and AI applications in healthcare.'
+              }
+            ].map((goal, index) => (
+              <motion.div 
+                key={goal.title}
+                className="about-card glass-card" 
+                role="gridcell"
+                initial={{ opacity: 0, y: 20 }}
+                animate={{ opacity: 1, y: 0 }}
+                transition={{ duration: 0.4, delay: 1.8 + index * 0.1 }}
+              >
+                <div className="card-icon" aria-hidden="true">{goal.icon}</div>
+                <h3 className="card-title">{goal.title}</h3>
+                <p className="card-description">
+                  {goal.description}
+                </p>
+              </motion.div>
+            ))}
           </div>
-        </section>
+        </motion.section>
       </div>
-    </div>
+    </motion.div>
   )
 }
 
