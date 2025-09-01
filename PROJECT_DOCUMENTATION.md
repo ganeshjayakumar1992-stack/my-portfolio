@@ -27,6 +27,22 @@ A modern, responsive personal portfolio website built with React 19, TypeScript,
 
 ## 🚨 **CRITICAL TROUBLESHOOTING GUIDE**
 
+## 📊 **PERFORMANCE METRICS POLICY**
+**IMPORTANT**: Performance metrics are strictly prohibited from UI display without explicit permission.
+
+### Performance Metrics Policy
+- **UI Display**: Never show performance metrics in the user interface
+- **Console Logging**: Acceptable for development and debugging
+- **Required Permission**: Written approval needed for any UI display
+- **Prohibited Metrics**: Load Time, FCP, LCP, CLS values
+- **Documentation**: See `PERFORMANCE_METRICS_POLICY.md` for complete policy
+
+### Current Implementation
+- Performance monitoring runs in background (development only)
+- All metrics logged to browser console
+- UI display completely disabled
+- Policy enforced through code review
+
 ### **Common Issues & Solutions**
 
 #### 1. **Tailwind CSS Compatibility Issues**

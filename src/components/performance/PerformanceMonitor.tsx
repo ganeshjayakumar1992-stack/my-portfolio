@@ -81,25 +81,8 @@ const PerformanceMonitor = () => {
     return null
   }
 
-  return (
-    <div style={{
-      position: 'fixed',
-      bottom: '20px',
-      right: '20px',
-      background: 'rgba(0, 0, 0, 0.8)',
-      color: 'white',
-      padding: '10px',
-      borderRadius: '8px',
-      fontSize: '12px',
-      zIndex: 10000,
-      fontFamily: 'monospace'
-    }}>
-      <div>Load Time: {metrics.loadTime.toFixed(2)}ms</div>
-      <div>FCP: {metrics.firstContentfulPaint.toFixed(2)}ms</div>
-      <div>LCP: {metrics.largestContentfulPaint.toFixed(2)}ms</div>
-      <div>CLS: {metrics.cumulativeLayoutShift.toFixed(3)}</div>
-    </div>
-  )
+  // Don't show anything in UI - performance monitoring only in console
+  return null
 }
 
 export default PerformanceMonitor

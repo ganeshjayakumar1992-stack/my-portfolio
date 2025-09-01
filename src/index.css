@@ -403,14 +403,14 @@ p {
   background: var(--bg-primary);
 }
 
-/* Enhanced Hero Section - Modern Daniel Sun Inspired */
+/* Enhanced Hero Section - Soft Modern Gradient */
 .hero {
   min-height: 100vh;
   display: flex;
   align-items: center;
   justify-content: center;
   padding: 0;
-  background: var(--gradient-hero);
+  background: linear-gradient(135deg, #f8fafc 0%, #e2e8f0 25%, #cbd5e1 50%, #94a3b8 75%, #64748b 100%);
   position: relative;
   overflow: hidden;
   margin-bottom: 0;
@@ -423,8 +423,16 @@ p {
   left: 0;
   right: 0;
   bottom: 0;
-  background: url('data:image/svg+xml,<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 100 100"><defs><pattern id="grain" width="100" height="100" patternUnits="userSpaceOnUse"><circle cx="50" cy="50" r="1" fill="%23ffffff" opacity="0.1"/></pattern></defs><rect width="100" height="100" fill="url(%23grain)"/></svg>');
-  opacity: 0.3;
+  background: 
+    linear-gradient(45deg, transparent 30%, rgba(255, 255, 255, 0.08) 50%, transparent 70%),
+    linear-gradient(-45deg, transparent 30%, rgba(255, 255, 255, 0.05) 50%, transparent 70%);
+  background-size: 150px 150px, 100px 100px;
+  animation: modern-shimmer 20s linear infinite;
+}
+
+@keyframes modern-shimmer {
+  0% { transform: translateX(-150px) translateY(-150px); }
+  100% { transform: translateX(150px) translateY(150px); }
 }
 
 .hero-content {
@@ -747,7 +755,7 @@ p {
 }
 
 .hero-title {
-  color: var(--text-primary);
+  color: #1e293b;
   margin-bottom: 1rem;
   font-size: clamp(3rem, 6vw, 5rem);
   font-weight: 700;
@@ -790,7 +798,7 @@ p {
 }
 
 .hero-subtitle {
-  color: var(--text-secondary);
+  color: #475569;
   font-size: var(--font-size-xl);
   font-weight: 400;
   margin-bottom: 2rem;
@@ -2548,12 +2556,12 @@ p {
 .section-title {
   font-size: clamp(2.5rem, 5vw, 4rem);
   margin-bottom: 1rem;
-  color: var(--text-primary);
+  color: #1e293b;
 }
 
 .section-subtitle {
   font-size: clamp(1.1rem, 2vw, 1.25rem);
-  color: var(--text-secondary);
+  color: #475569;
   max-width: 600px;
   margin: 0 auto;
   line-height: 1.6;
@@ -2591,11 +2599,11 @@ p {
   font-size: 1.5rem;
   font-weight: 600;
   margin-bottom: 1rem;
-  color: var(--text-primary);
+  color: #1e293b;
 }
 
 .card-description {
-  color: var(--text-secondary);
+  color: #475569;
   line-height: 1.6;
 }
 
@@ -2842,7 +2850,7 @@ p {
 
 /* About Section Enhanced Background */
 .about-section {
-  background: linear-gradient(135deg, rgba(255, 255, 255, 0.9) 0%, rgba(249, 250, 251, 0.9) 100%);
+  background: linear-gradient(135deg, #f1f5f9 0%, #e2e8f0 25%, #cbd5e1 50%, #94a3b8 75%, #64748b 100%);
   position: relative;
 }
 
@@ -2853,14 +2861,17 @@ p {
   left: 0;
   right: 0;
   bottom: 0;
-  background: url('data:image/svg+xml,<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 100 100"><defs><pattern id="dots" width="20" height="20" patternUnits="userSpaceOnUse"><circle cx="10" cy="10" r="1" fill="%233b82f6" opacity="0.1"/></pattern></defs><rect width="100" height="100" fill="url(%23dots)"/></svg>');
-  opacity: 0.5;
+  background: 
+    linear-gradient(45deg, transparent 30%, rgba(255, 255, 255, 0.06) 50%, transparent 70%),
+    linear-gradient(-45deg, transparent 30%, rgba(255, 255, 255, 0.04) 50%, transparent 70%);
+  background-size: 120px 120px, 80px 80px;
+  animation: modern-shimmer 25s linear infinite;
   z-index: -1;
 }
 
 /* Projects Section Enhanced Background */
 .projects-section {
-  background: linear-gradient(135deg, rgba(249, 250, 251, 0.9) 0%, rgba(243, 244, 246, 0.9) 100%);
+  background: linear-gradient(135deg, #e2e8f0 0%, #cbd5e1 25%, #94a3b8 50%, #64748b 75%, #475569 100%);
   position: relative;
 }
 
@@ -2871,14 +2882,17 @@ p {
   left: 0;
   right: 0;
   bottom: 0;
-  background: url('data:image/svg+xml,<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 100 100"><defs><pattern id="grid" width="25" height="25" patternUnits="userSpaceOnUse"><path d="M 25 0 L 0 0 0 25" fill="none" stroke="%238b5cf6" stroke-width="0.5" opacity="0.2"/></pattern></defs><rect width="100" height="100" fill="url(%23grid)"/></svg>');
-  opacity: 0.3;
+  background: 
+    linear-gradient(45deg, transparent 30%, rgba(255, 255, 255, 0.06) 50%, transparent 70%),
+    linear-gradient(-45deg, transparent 30%, rgba(255, 255, 255, 0.04) 50%, transparent 70%);
+  background-size: 140px 140px, 90px 90px;
+  animation: modern-shimmer 30s linear infinite reverse;
   z-index: -1;
 }
 
 /* Contact Section Enhanced Background */
 .contact-section {
-  background: linear-gradient(135deg, rgba(255, 255, 255, 0.9) 0%, rgba(249, 250, 251, 0.9) 100%);
+  background: linear-gradient(135deg, #cbd5e1 0%, #94a3b8 25%, #64748b 50%, #475569 75%, #334155 100%);
   position: relative;
 }
 
@@ -2889,16 +2903,19 @@ p {
   left: 0;
   right: 0;
   bottom: 0;
-  background: url('data:image/svg+xml,<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 100 100"><defs><pattern id="circles" width="30" height="30" patternUnits="userSpaceOnUse"><circle cx="15" cy="15" r="2" fill="%23ec4899" opacity="0.1"/></pattern></defs><rect width="100" height="100" fill="url(%23circles)"/></svg>');
-  opacity: 0.4;
+  background: 
+    linear-gradient(45deg, transparent 30%, rgba(255, 255, 255, 0.06) 50%, transparent 70%),
+    linear-gradient(-45deg, transparent 30%, rgba(255, 255, 255, 0.04) 50%, transparent 70%);
+  background-size: 130px 130px, 85px 85px;
+  animation: modern-shimmer 28s linear infinite;
   z-index: -1;
 }
 
 /* Enhanced Project Cards */
 .project-card {
-  background: var(--gradient-card);
+  background: rgba(255, 255, 255, 0.95);
   backdrop-filter: blur(20px);
-  border: 1px solid rgba(255, 255, 255, 0.4);
+  border: 1px solid rgba(255, 255, 255, 0.6);
   border-radius: 24px;
   padding: 2rem;
   text-align: center;
@@ -2934,9 +2951,9 @@ p {
 
 /* Enhanced About Cards */
 .about-card {
-  background: var(--gradient-card);
+  background: rgba(255, 255, 255, 0.95);
   backdrop-filter: blur(20px);
-  border: 1px solid rgba(255, 255, 255, 0.4);
+  border: 1px solid rgba(255, 255, 255, 0.6);
   border-radius: 24px;
   padding: 2rem;
   text-align: center;
@@ -2965,9 +2982,22 @@ p {
 }
 
 .about-card:hover {
-  transform: translateY(-8px);
+  transform: translateY(-8px) scale(1.02);
   box-shadow: 0 20px 40px rgba(0, 0, 0, 0.15);
   border-color: rgba(139, 92, 246, 0.3);
+}
+
+.about-card {
+  animation: subtle-float 6s ease-in-out infinite;
+}
+
+.about-card:nth-child(1) { animation-delay: 0s; }
+.about-card:nth-child(2) { animation-delay: 2s; }
+.about-card:nth-child(3) { animation-delay: 4s; }
+
+@keyframes subtle-float {
+  0%, 100% { transform: translateY(0px); }
+  50% { transform: translateY(-5px); }
 }
 
 /* Enhanced Glassmorphism Effects */
